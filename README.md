@@ -1,17 +1,17 @@
-# tamagui-phosphor-icons
+# 🥚 Tamagui Phosphor Icons
 
 A Tamagui-themed icon library for [Phosphor Icons](https://phosphoricons.com).
 
 ## Installation
 
 ```bash
-npm install tamagui-phosphor-icons phosphor-react-native
+npm install tamagui-phosphor phosphor-react-native
 # or
-yarn add tamagui-phosphor-icons phosphor-react-native
+yarn add tamagui-phosphor phosphor-react-native
 # or
-pnpm add tamagui-phosphor-icons phosphor-react-native
+pnpm add tamagui-phosphor phosphor-react-native
 # or
-bun add tamagui-phosphor-icons phosphor-react-native
+bun add tamagui-phosphor phosphor-react-native
 ```
 
 ## Usage
