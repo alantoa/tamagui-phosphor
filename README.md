@@ -1,33 +1,60 @@
-# react-native-tamagui-phosphor-icons
+# tamagui-phosphor-icons
 
-phosphor icons for Tamagui
+A Tamagui-themed icon library for [Phosphor Icons](https://phosphoricons.com).
 
 ## Installation
 
-```sh
-npm install react-native-tamagui-phosphor-icons
+```bash
+npm install tamagui-phosphor-icons phosphor-react-native
+# or
+yarn add tamagui-phosphor-icons phosphor-react-native
+# or
+pnpm add tamagui-phosphor-icons phosphor-react-native
+# or
+bun add tamagui-phosphor-icons phosphor-react-native
 ```
 
 ## Usage
 
+```tsx
+import * as Phosphor from './index';
+import { Button } from 'tamagui';
 
-```js
-import { multiply } from 'react-native-tamagui-phosphor-icons';
-
-// ...
-
-const result = await multiply(3, 7);
+export default function App() {
+  return <Button icon={Phosphor.House}>House</Button>;
+}
 ```
 
+## Features
 
-## Contributing
+- Full Tamagui theme system support
+- Includes all Phosphor Icons
+- React Native support
+- Type-safe
+- Automatically renames reserved icon names to avoid conflicts
 
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
+## Props
+
+Icon components accept the following props:
+
+- `size`: Size of the icon (number)
+- `color`: Color of the icon (string)
+- `weight`: Weight of the icon ('thin' | 'light' | 'regular' | 'bold' | 'fill')
+- All other Tamagui icon props
+
+## Development
+
+```bash
+# Generate icons
+bun generate
+
+# Run tests
+bun test
+
+# Release new version
+bun release
+```
 
 ## License
 
-MIT
-
----
-
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
+MIT © [Alan Toa](https://github.com/alantoa)
