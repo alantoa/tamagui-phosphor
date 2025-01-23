@@ -2,25 +2,15 @@
   "name": "tamagui-phosphor",
   "version": "0.1.3",
   "description": "A Tamagui-themed icon library for Phosphor Icons.",
-  "source": "./src/index.ts",
-  "main": "./src/index.ts",
-  "module": "./src/index.ts",
-  "types": "./src/index.ts",
-  "react-native": "./src/index.ts",
-  "exports": {
-    ".": {
-      "import": {
-        "types": "./src/index.ts",
-        "default": "./src/index.ts"
-      },
-      "require": {
-        "types": "./src/index.ts",
-        "default": "./src/index.ts"
-      }
-    }
-  },
+  "source": "src/index.ts",
+  "types": "types/index.d.ts",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "react-native": "src/index.ts",
   "files": [
-    "src"
+    "src",
+    "dist",
+    "types"
   ],
   "scripts": {
     "prepare": "bun run generate",
