@@ -1,5 +1,6 @@
 const fs = require('node:fs');
 const path = require('node:path');
+const { execSync } = require('node:child_process');
 
 const rootDir = path.join(__dirname, '..');
 const phosphorPath = require.resolve('phosphor-react-native/src/index');
@@ -39,8 +40,7 @@ fs.readFile(phosphorPath, 'utf8', (err, data) => {
 export const ${iconName} = themed(_${originalName});`;
   });
 
-  const indexContent = `
-import { themed } from '@tamagui/helpers-icon'
+  const indexContent = `import { themed } from '@tamagui/helpers-icon'
 
 ${iconExports.join('\n')}
 `;
@@ -51,5 +51,5 @@ ${iconExports.join('\n')}
     'utf-8'
   );
 
-  require('node:child_process').execSync('biome check --write src');
+  execSync('biome check --write src');
 });
