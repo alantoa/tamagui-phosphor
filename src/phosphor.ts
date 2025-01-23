@@ -1,1 +1,1 @@
-/* @__PURE__ */ export * as Phosphor from './index';
+/* @__PURE__ */ export * as Phosphor from "./index";

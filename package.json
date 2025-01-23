@@ -1,6 +1,6 @@
 {
   "name": "tamagui-phosphor",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A Tamagui-themed icon library for Phosphor Icons.",
   "source": "./src/index.ts",
   "main": "./src/index.ts",
