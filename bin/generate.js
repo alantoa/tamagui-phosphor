@@ -158,7 +158,7 @@ ${exportMatches
 `;
 
   fs.writeFileSync(path.join(srcDir, 'index.ts'), indexContent, 'utf-8');
-  fs.writeFileSync(path.join(typesDir, 'index.d.ts'), dtsContent, 'utf-8');
+  fs.writeFileSync(path.join(typesDir, 'index.d.ts'), indexContent, 'utf-8');
 
   fs.writeFileSync(path.join(distDir, 'index.cjs'), cjsContent, 'utf-8');
   fs.writeFileSync(path.join(distDir, 'index.mjs'), esmContent, 'utf-8');
