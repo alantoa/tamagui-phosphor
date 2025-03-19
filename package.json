@@ -6,17 +6,16 @@
   "types": "types/index.d.ts",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
-  "react-native": "src/index.ts",
+  "react-native": "dist/index.mjs",
   "files": [
-    "src",
     "dist",
     "types"
   ],
   "scripts": {
     "prepare": "bun run generate",
-    "release": "release-it",
     "generate": "bun ./bin/generate",
-    "test": "bun test"
+    "prepublishOnly": "bun run build",
+    "release": "release-it"
   },
   "keywords": [
     "react-native",

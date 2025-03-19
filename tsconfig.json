@@ -23,7 +23,8 @@
     "downlevelIteration": true,
     "declaration": true,
     "pretty": true,
-    "types": ["bun-types"]
+    "types": ["bun-types"],
+    "noEmitOnError": false
   },
   "include": ["typings/**/*", "src/**/*"],
   "exclude": ["node_modules", "dist"]

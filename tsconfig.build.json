@@ -4,7 +4,10 @@
     "declaration": true,
     "emitDeclarationOnly": true,
     "outDir": "lib/types",
-    "noEmit": false
+    "noEmit": false,
+    "noEmitOnError": false,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true
   },
   "include": ["src/**/*"],
   "exclude": ["example", "lib", "**/*.test.ts", "**/*.spec.ts"]
