@@ -8,14 +8,15 @@
   "module": "dist/index.mjs",
   "react-native": "dist/index.mjs",
   "files": [
+    "src",
     "dist",
     "types"
   ],
   "scripts": {
     "prepare": "bun run generate",
+    "release": "release-it",
     "generate": "bun ./bin/generate",
-    "prepublishOnly": "bun run build",
-    "release": "release-it"
+    "test": "bun test"
   },
   "keywords": [
     "react-native",
