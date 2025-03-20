@@ -1,13 +1,12 @@
 {
   "name": "tamagui-phosphor",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "sideEffects": false,
   "description": "A Tamagui-themed icon library for Phosphor Icons.",
   "source": "dist/esm/index.js",
   "types": "./types/index.d.ts",
   "main": "dist/cjs",
   "module": "dist/esm",
-  "react-native": "dist/index.mjs",
   "files": [
     "dist"
   ],
