@@ -1,0 +1,24 @@
+{
+  "name": "@types/tamagui-phosphor",
+  "version": "0.1.10",
+  "description": "TypeScript definitions for tamagui-phosphor",
+  "types": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alantoa/tamagui-phosphor.git"
+  },
+  "author": "alantoa <toacncom@gmail.com>",
+  "license": "MIT",
+  "main": "",
+  "files": [
+    "index.d.ts",
+    "types/**/*.d.ts"
+  ],
+  "scripts": {
+    "release": "release-it"
+  },
+  "dependencies": {
+    "@types/react": "*"
+  },
+  "typeScriptVersion": "4.0"
+}
