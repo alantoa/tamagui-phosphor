@@ -1,0 +1,4 @@
+import type { NamedExoticComponent } from 'react';
+import type { IconProps } from '@tamagui/helpers-icon';
+export declare const DoorOpenDuotone: NamedExoticComponent<IconProps>;
+//# sourceMappingURL=door-open-duotone.d.ts.map
