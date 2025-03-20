@@ -8,7 +8,6 @@
   "module": "dist/esm",
   "react-native": "dist/index.mjs",
   "files": [
-    "src",
     "types",
     "dist"
   ],
