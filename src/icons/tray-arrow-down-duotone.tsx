@@ -1,80 +1,81 @@
-import type { IconProps } from "@tamagui/helpers-icon";
-import { themed } from "@tamagui/helpers-icon";
-import PropTypes from "prop-types";
-import React, { memo } from "react";
-import type { NamedExoticComponent } from "react";
+import React, { memo } from 'react'
+import PropTypes from 'prop-types'
+import type { NamedExoticComponent } from 'react'
+import type { IconProps } from '@tamagui/helpers-icon'
 import {
-	Defs,
-	Ellipse,
-	G,
-	Line,
-	LinearGradient,
-	Path,
-	Polygon,
-	Polyline,
-	RadialGradient,
-	Rect,
-	Stop,
-	Svg,
-	Symbol,
-	Use,
-	Circle as _Circle,
-	Text as _Text,
-} from "react-native-svg";
+  Svg,
+  Circle as _Circle,
+  Ellipse as SvgEllipse,
+  G,
+  LinearGradient,
+  RadialGradient,
+  Line,
+  Path as SvgPath,
+  Polygon as SvgPolygon,
+  Polyline as SvgPolyline,
+  Rect as SvgRect,
+  Symbol as SvgSymbol,
+  Text as _Text,
+  Use,
+  Defs,
+  Stop as SvgStop,
+} from 'react-native-svg'
+import { themed } from '@tamagui/helpers-icon'
 
 const Icon = (props) => {
-	const { color = "black", size = 24, ...otherProps } = props;
-	return (
-		<Svg viewBox="0 0 256 256" {...otherProps}>
-			<Rect width="256" height="256" fill="none" />
-			<Path
-				d="M76.68,160a8,8,0,0,1,5.66,2.34l19.31,19.32a8,8,0,0,0,5.66,2.34h41.37a8,8,0,0,0,5.66-2.34l19.31-19.32a8,8,0,0,1,5.66-2.34H216V48a8,8,0,0,0-8-8H48a8,8,0,0,0-8,8V160Z"
-				opacity="0.2"
-			/>
-			<Rect
-				x="40"
-				y="40"
-				width="176"
-				height="176"
-				rx="8"
-				fill="none"
-				stroke={color}
-				strokeLinecap="round"
-				strokeLinejoin="round"
-				strokeWidth="16"
-			/>
-			<Line
-				x1="128"
-				y1="72"
-				x2="128"
-				y2="152"
-				fill="none"
-				stroke={color}
-				strokeLinecap="round"
-				strokeLinejoin="round"
-				strokeWidth="16"
-			/>
-			<Path
-				d="M40,160H76.69a8,8,0,0,1,5.65,2.34l19.32,19.32a8,8,0,0,0,5.65,2.34h41.38a8,8,0,0,0,5.65-2.34l19.32-19.32a8,8,0,0,1,5.65-2.34H216"
-				fill="none"
-				stroke={color}
-				strokeLinecap="round"
-				strokeLinejoin="round"
-				strokeWidth="16"
-			/>
-			<Polyline
-				points="96 120 128 152 160 120"
-				fill="none"
-				stroke={color}
-				strokeLinecap="round"
-				strokeLinejoin="round"
-				strokeWidth="16"
-			/>
-		</Svg>
-	);
-};
+  const { color = 'black', size = 24, ...otherProps } = props
+  return (
+    <Svg viewBox="0 0 256 256" {...otherProps}>
+      <SvgRect width="256" height="256" fill="none" />
+      <SvgPath
+        d="M76.68,160a8,8,0,0,1,5.66,2.34l19.31,19.32a8,8,0,0,0,5.66,2.34h41.37a8,8,0,0,0,5.66-2.34l19.31-19.32a8,8,0,0,1,5.66-2.34H216V48a8,8,0,0,0-8-8H48a8,8,0,0,0-8,8V160Z"
+        opacity="0.2"
+      />
+      <SvgRect
+        x="40"
+        y="40"
+        width="176"
+        height="176"
+        rx="8"
+        fill="none"
+        stroke={color}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="16"
+      />
+      <Line
+        x1="128"
+        y1="72"
+        x2="128"
+        y2="152"
+        fill="none"
+        stroke={color}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="16"
+      />
+      <SvgPath
+        d="M40,160H76.69a8,8,0,0,1,5.65,2.34l19.32,19.32a8,8,0,0,0,5.65,2.34h41.38a8,8,0,0,0,5.65-2.34l19.32-19.32a8,8,0,0,1,5.65-2.34H216"
+        fill="none"
+        stroke={color}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="16"
+      />
+      <SvgPolyline
+        points="96 120 128 152 160 120"
+        fill="none"
+        stroke={color}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="16"
+      />
+    </Svg>
+  )
+}
 
-Icon.displayName = "TrayArrowDownDuotone";
+Icon.displayName = 'TrayArrowDownDuotone'
 
-export const TrayArrowDownDuotone: NamedExoticComponent<IconProps> =
-	memo<IconProps>(themed(Icon));
+export const TrayArrowDownDuotone: NamedExoticComponent<IconProps> = memo<IconProps>(
+  themed(Icon)
+)

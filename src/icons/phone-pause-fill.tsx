@@ -1,39 +1,39 @@
-import type { IconProps } from "@tamagui/helpers-icon";
-import { themed } from "@tamagui/helpers-icon";
-import PropTypes from "prop-types";
-import React, { memo } from "react";
-import type { NamedExoticComponent } from "react";
+import React, { memo } from 'react'
+import PropTypes from 'prop-types'
+import type { NamedExoticComponent } from 'react'
+import type { IconProps } from '@tamagui/helpers-icon'
 import {
-	Defs,
-	Ellipse,
-	G,
-	Line,
-	LinearGradient,
-	Path,
-	Polygon,
-	Polyline,
-	RadialGradient,
-	Rect,
-	Stop,
-	Svg,
-	Symbol,
-	Use,
-	Circle as _Circle,
-	Text as _Text,
-} from "react-native-svg";
+  Svg,
+  Circle as _Circle,
+  Ellipse as SvgEllipse,
+  G,
+  LinearGradient,
+  RadialGradient,
+  Line,
+  Path as SvgPath,
+  Polygon as SvgPolygon,
+  Polyline as SvgPolyline,
+  Rect as SvgRect,
+  Symbol as SvgSymbol,
+  Text as _Text,
+  Use,
+  Defs,
+  Stop as SvgStop,
+} from 'react-native-svg'
+import { themed } from '@tamagui/helpers-icon'
 
 const Icon = (props) => {
-	const { color = "black", size = 24, ...otherProps } = props;
-	return (
-		<Svg viewBox="0 0 256 256" {...otherProps}>
-			<Rect width="256" height="256" fill="none" />
-			<Path d="M223.88,183.08A56.26,56.26,0,0,1,168,232C88.6,232,24,167.4,24,88A56.26,56.26,0,0,1,72.92,32.12a16,16,0,0,1,16.62,9.52l21.12,47.15,0,.12A16,16,0,0,1,109.39,104c-.18.27-.37.52-.57.77L88,129.45c7.49,15.22,23.41,31,38.83,38.51l24.34-20.71a8.12,8.12,0,0,1,.75-.56,16,16,0,0,1,15.18-1.4l.12.06,47.1,21.11A16,16,0,0,1,223.88,183.08ZM200,112a8,8,0,0,0,8-8V48a8,8,0,0,0-16,0v56A8,8,0,0,0,200,112Zm-40,0a8,8,0,0,0,8-8V48a8,8,0,0,0-16,0v56A8,8,0,0,0,160,112Z" />
-		</Svg>
-	);
-};
+  const { color = 'black', size = 24, ...otherProps } = props
+  return (
+    <Svg viewBox="0 0 256 256" {...otherProps}>
+      <SvgRect width="256" height="256" fill="none" />
+      <SvgPath d="M223.88,183.08A56.26,56.26,0,0,1,168,232C88.6,232,24,167.4,24,88A56.26,56.26,0,0,1,72.92,32.12a16,16,0,0,1,16.62,9.52l21.12,47.15,0,.12A16,16,0,0,1,109.39,104c-.18.27-.37.52-.57.77L88,129.45c7.49,15.22,23.41,31,38.83,38.51l24.34-20.71a8.12,8.12,0,0,1,.75-.56,16,16,0,0,1,15.18-1.4l.12.06,47.1,21.11A16,16,0,0,1,223.88,183.08ZM200,112a8,8,0,0,0,8-8V48a8,8,0,0,0-16,0v56A8,8,0,0,0,200,112Zm-40,0a8,8,0,0,0,8-8V48a8,8,0,0,0-16,0v56A8,8,0,0,0,160,112Z" />
+    </Svg>
+  )
+}
 
-Icon.displayName = "PhonePauseFill";
+Icon.displayName = 'PhonePauseFill'
 
 export const PhonePauseFill: NamedExoticComponent<IconProps> = memo<IconProps>(
-	themed(Icon),
-);
+  themed(Icon)
+)

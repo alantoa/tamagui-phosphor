@@ -1,39 +1,39 @@
-import type { IconProps } from "@tamagui/helpers-icon";
-import { themed } from "@tamagui/helpers-icon";
-import PropTypes from "prop-types";
-import React, { memo } from "react";
-import type { NamedExoticComponent } from "react";
+import React, { memo } from 'react'
+import PropTypes from 'prop-types'
+import type { NamedExoticComponent } from 'react'
+import type { IconProps } from '@tamagui/helpers-icon'
 import {
-	Defs,
-	Ellipse,
-	G,
-	Line,
-	LinearGradient,
-	Path,
-	Polygon,
-	Polyline,
-	RadialGradient,
-	Rect,
-	Stop,
-	Svg,
-	Symbol,
-	Use,
-	Circle as _Circle,
-	Text as _Text,
-} from "react-native-svg";
+  Svg,
+  Circle as _Circle,
+  Ellipse as SvgEllipse,
+  G,
+  LinearGradient,
+  RadialGradient,
+  Line,
+  Path as SvgPath,
+  Polygon as SvgPolygon,
+  Polyline as SvgPolyline,
+  Rect as SvgRect,
+  Symbol as SvgSymbol,
+  Text as _Text,
+  Use,
+  Defs,
+  Stop as SvgStop,
+} from 'react-native-svg'
+import { themed } from '@tamagui/helpers-icon'
 
 const Icon = (props) => {
-	const { color = "black", size = 24, ...otherProps } = props;
-	return (
-		<Svg viewBox="0 0 256 256" {...otherProps}>
-			<Rect width="256" height="256" fill="none" />
-			<Path d="M187.14,114.84l26.78-29.46a8,8,0,0,0-11.84-10.76l-20.55,22.6-17.2-54.07A15.94,15.94,0,0,0,149.08,32H106.91A15.94,15.94,0,0,0,91.66,43.15l-50.91,160A16,16,0,0,0,56,224H200a16,16,0,0,0,15.25-20.85ZM71.27,160,106.91,48h42.17l20,62.9L124.46,160Zm74.81,0,28.62-31.48,10,31.48Z" />
-		</Svg>
-	);
-};
+  const { color = 'black', size = 24, ...otherProps } = props
+  return (
+    <Svg viewBox="0 0 256 256" {...otherProps}>
+      <SvgRect width="256" height="256" fill="none" />
+      <SvgPath d="M187.14,114.84l26.78-29.46a8,8,0,0,0-11.84-10.76l-20.55,22.6-17.2-54.07A15.94,15.94,0,0,0,149.08,32H106.91A15.94,15.94,0,0,0,91.66,43.15l-50.91,160A16,16,0,0,0,56,224H200a16,16,0,0,0,15.25-20.85ZM71.27,160,106.91,48h42.17l20,62.9L124.46,160Zm74.81,0,28.62-31.48,10,31.48Z" />
+    </Svg>
+  )
+}
 
-Icon.displayName = "MetronomeFill";
+Icon.displayName = 'MetronomeFill'
 
 export const MetronomeFill: NamedExoticComponent<IconProps> = memo<IconProps>(
-	themed(Icon),
-);
+  themed(Icon)
+)

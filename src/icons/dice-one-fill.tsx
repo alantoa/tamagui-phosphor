@@ -1,39 +1,37 @@
-import type { IconProps } from "@tamagui/helpers-icon";
-import { themed } from "@tamagui/helpers-icon";
-import PropTypes from "prop-types";
-import React, { memo } from "react";
-import type { NamedExoticComponent } from "react";
+import React, { memo } from 'react'
+import PropTypes from 'prop-types'
+import type { NamedExoticComponent } from 'react'
+import type { IconProps } from '@tamagui/helpers-icon'
 import {
-	Defs,
-	Ellipse,
-	G,
-	Line,
-	LinearGradient,
-	Path,
-	Polygon,
-	Polyline,
-	RadialGradient,
-	Rect,
-	Stop,
-	Svg,
-	Symbol,
-	Use,
-	Circle as _Circle,
-	Text as _Text,
-} from "react-native-svg";
+  Svg,
+  Circle as _Circle,
+  Ellipse as SvgEllipse,
+  G,
+  LinearGradient,
+  RadialGradient,
+  Line,
+  Path as SvgPath,
+  Polygon as SvgPolygon,
+  Polyline as SvgPolyline,
+  Rect as SvgRect,
+  Symbol as SvgSymbol,
+  Text as _Text,
+  Use,
+  Defs,
+  Stop as SvgStop,
+} from 'react-native-svg'
+import { themed } from '@tamagui/helpers-icon'
 
 const Icon = (props) => {
-	const { color = "black", size = 24, ...otherProps } = props;
-	return (
-		<Svg viewBox="0 0 256 256" {...otherProps}>
-			<Rect width="256" height="256" fill="none" />
-			<Path d="M192,32H64A32,32,0,0,0,32,64V192a32,32,0,0,0,32,32H192a32,32,0,0,0,32-32V64A32,32,0,0,0,192,32ZM128,140a12,12,0,1,1,12-12A12,12,0,0,1,128,140Z" />
-		</Svg>
-	);
-};
+  const { color = 'black', size = 24, ...otherProps } = props
+  return (
+    <Svg viewBox="0 0 256 256" {...otherProps}>
+      <SvgRect width="256" height="256" fill="none" />
+      <SvgPath d="M192,32H64A32,32,0,0,0,32,64V192a32,32,0,0,0,32,32H192a32,32,0,0,0,32-32V64A32,32,0,0,0,192,32ZM128,140a12,12,0,1,1,12-12A12,12,0,0,1,128,140Z" />
+    </Svg>
+  )
+}
 
-Icon.displayName = "DiceOneFill";
+Icon.displayName = 'DiceOneFill'
 
-export const DiceOneFill: NamedExoticComponent<IconProps> = memo<IconProps>(
-	themed(Icon),
-);
+export const DiceOneFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))

@@ -1,39 +1,37 @@
-import type { IconProps } from "@tamagui/helpers-icon";
-import { themed } from "@tamagui/helpers-icon";
-import PropTypes from "prop-types";
-import React, { memo } from "react";
-import type { NamedExoticComponent } from "react";
+import React, { memo } from 'react'
+import PropTypes from 'prop-types'
+import type { NamedExoticComponent } from 'react'
+import type { IconProps } from '@tamagui/helpers-icon'
 import {
-	Defs,
-	Ellipse,
-	G,
-	Line,
-	LinearGradient,
-	Path,
-	Polygon,
-	Polyline,
-	RadialGradient,
-	Rect,
-	Stop,
-	Svg,
-	Symbol,
-	Use,
-	Circle as _Circle,
-	Text as _Text,
-} from "react-native-svg";
+  Svg,
+  Circle as _Circle,
+  Ellipse as SvgEllipse,
+  G,
+  LinearGradient,
+  RadialGradient,
+  Line,
+  Path as SvgPath,
+  Polygon as SvgPolygon,
+  Polyline as SvgPolyline,
+  Rect as SvgRect,
+  Symbol as SvgSymbol,
+  Text as _Text,
+  Use,
+  Defs,
+  Stop as SvgStop,
+} from 'react-native-svg'
+import { themed } from '@tamagui/helpers-icon'
 
 const Icon = (props) => {
-	const { color = "black", size = 24, ...otherProps } = props;
-	return (
-		<Svg viewBox="0 0 256 256" {...otherProps}>
-			<Rect width="256" height="256" fill="none" />
-			<Path d="M248,208a8,8,0,0,1-8,8H16a8,8,0,0,1,0-16H240A8,8,0,0,1,248,208ZM16.3,98.18a8,8,0,0,1,3.51-9l104-64a8,8,0,0,1,8.38,0l104,64A8,8,0,0,1,232,104H208v64h16a8,8,0,0,1,0,16H32a8,8,0,0,1,0-16H48V104H24A8,8,0,0,1,16.3,98.18ZM144,160a8,8,0,0,0,16,0V112a8,8,0,0,0-16,0Zm-48,0a8,8,0,0,0,16,0V112a8,8,0,0,0-16,0Z" />
-		</Svg>
-	);
-};
+  const { color = 'black', size = 24, ...otherProps } = props
+  return (
+    <Svg viewBox="0 0 256 256" {...otherProps}>
+      <SvgRect width="256" height="256" fill="none" />
+      <SvgPath d="M248,208a8,8,0,0,1-8,8H16a8,8,0,0,1,0-16H240A8,8,0,0,1,248,208ZM16.3,98.18a8,8,0,0,1,3.51-9l104-64a8,8,0,0,1,8.38,0l104,64A8,8,0,0,1,232,104H208v64h16a8,8,0,0,1,0,16H32a8,8,0,0,1,0-16H48V104H24A8,8,0,0,1,16.3,98.18ZM144,160a8,8,0,0,0,16,0V112a8,8,0,0,0-16,0Zm-48,0a8,8,0,0,0,16,0V112a8,8,0,0,0-16,0Z" />
+    </Svg>
+  )
+}
 
-Icon.displayName = "BankFill";
+Icon.displayName = 'BankFill'
 
-export const BankFill: NamedExoticComponent<IconProps> = memo<IconProps>(
-	themed(Icon),
-);
+export const BankFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))

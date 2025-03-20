@@ -78,20 +78,20 @@ icons.forEach((i) => {
     import {
       Svg,
       Circle as _Circle,
-      Ellipse,
+      Ellipse as SvgEllipse,
       G,
       LinearGradient,
       RadialGradient, 
       Line,
-      Path,
-      Polygon,
-      Polyline,
-      Rect,
-      Symbol,
+      Path as SvgPath,
+      Polygon as SvgPolygon,
+      Polyline as SvgPolyline,
+      Rect as SvgRect,
+      Symbol as SvgSymbol,
       Text as _Text,
       Use,
       Defs,
-      Stop
+      Stop as SvgStop
     } from 'react-native-svg'
     import { themed } from '@tamagui/helpers-icon'
 
@@ -110,34 +110,34 @@ icons.forEach((i) => {
           .replace('</svg', '</Svg')
           .replace(new RegExp('<circle', 'g'), '<_Circle')
           .replace(new RegExp('</circle', 'g'), '</_Circle')
-          .replace(new RegExp('<ellipse', 'g'), '<Ellipse')
-          .replace(new RegExp('</ellipse', 'g'), '</Ellipse')
+          .replace(new RegExp('<ellipse', 'g'), '<SvgEllipse')
+          .replace(new RegExp('</ellipse', 'g'), '</SvgEllipse')
           .replace(new RegExp('<g', 'g'), '<G')
           .replace(new RegExp('</g', 'g'), '</G')
           .replace(new RegExp('<linear-gradient', 'g'), '<LinearGradient')
           .replace(new RegExp('</linear-gradient', 'g'), '</LinearGradient')
           .replace(new RegExp('<radial-gradient', 'g'), '<RadialGradient')
           .replace(new RegExp('</radial-gradient', 'g'), '</RadialGradient')
-          .replace(new RegExp('<path', 'g'), '<Path')
-          .replace(new RegExp('</path', 'g'), '</Path')
+          .replace(new RegExp('<path', 'g'), '<SvgPath')
+          .replace(new RegExp('</path', 'g'), '</SvgPath')
           .replace(new RegExp('<line', 'g'), '<Line')
           .replace(new RegExp('</line', 'g'), '</Line')
-          .replace(new RegExp('<polygon', 'g'), '<Polygon')
-          .replace(new RegExp('</polygon', 'g'), '</Polygon')
-          .replace(new RegExp('<polyline', 'g'), '<Polyline')
-          .replace(new RegExp('</polyline', 'g'), '</Polyline')
-          .replace(new RegExp('<rect', 'g'), '<Rect')
-          .replace(new RegExp('</rect', 'g'), '</Rect')
-          .replace(new RegExp('<symbol', 'g'), '<Symbol')
-          .replace(new RegExp('</symbol', 'g'), '</Symbol')
+          .replace(new RegExp('<polygon', 'g'), '<SvgPolygon')
+          .replace(new RegExp('</polygon', 'g'), '</SvgPolygon')
+          .replace(new RegExp('<polyline', 'g'), '<SvgPolyline')
+          .replace(new RegExp('</polyline', 'g'), '</SvgPolyline')
+          .replace(new RegExp('<rect', 'g'), '<SvgRect')
+          .replace(new RegExp('</rect', 'g'), '</SvgRect')
+          .replace(new RegExp('<symbol', 'g'), '<SvgSymbol')
+          .replace(new RegExp('</symbol', 'g'), '</SvgSymbol')
           .replace(new RegExp('<text', 'g'), '<_Text')
           .replace(new RegExp('</text', 'g'), '</_Text')
           .replace(new RegExp('<use', 'g'), '<Use')
           .replace(new RegExp('</use', 'g'), '</Use')
           .replace(new RegExp('<defs', 'g'), '<Defs')
           .replace(new RegExp('</defs', 'g'), '</Defs')
-          .replace(new RegExp('<stop', 'g'), '<Stop')
-          .replace(new RegExp('</stop', 'g'), '</Stop')
+          .replace(new RegExp('<stop', 'g'), '<SvgStop')
+          .replace(new RegExp('</stop', 'g'), '</SvgStop')
           .replace(new RegExp('px', 'g'), '')}
       )
     }
