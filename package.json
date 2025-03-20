@@ -3,14 +3,20 @@
   "version": "0.1.9",
   "description": "A Tamagui-themed icon library for Phosphor Icons.",
   "source": "src/index.ts",
-  "types": "types/index.d.ts",
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
+  "types": "./types/index.d.ts",
+  "main": "dist/cjs",
+  "module": "dist/esm",
   "react-native": "dist/index.mjs",
   "files": [
-    "src"
+    "src",
+    "types",
+    "dist"
   ],
   "scripts": {
+    "build": "tamagui-build",
+    "watch": "tamagui-build --watch",
+    "clean": "tamagui-build clean",
+    "clean:build": "tamagui-build clean:build",
     "prepare": "bun run generate",
     "release": "release-it",
     "generate": "bun ./bin/generate",
@@ -38,6 +44,8 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@release-it/conventional-changelog": "^9.0.2",
+    "@tamagui/build": "^1.125.26",
+    "@tamagui/core": "^1.125.26",
     "@tamagui/helpers-icon": "^1.125.26",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.2.0",
@@ -56,7 +64,11 @@
   },
   "peerDependencies": {
     "@types/react": "*",
-    "phosphor-react-native": "*"
+    "@tamagui/core": "*",
+    "@tamagui/helpers-icon": "*",
+    "@tamagui/build": "*",
+    "react-native-svg": "*",
+    "react": "*"
   },
   "release-it": {
     "git": {

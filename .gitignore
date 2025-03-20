@@ -32,4 +32,7 @@ lib/
 ios/generated
 android/generated
 
-dist/
+dist
+**/_
+**/tests/spec/out
+
