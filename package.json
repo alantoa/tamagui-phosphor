@@ -5,10 +5,8 @@
   "description": "A Tamagui-themed icon library for Phosphor Icons.",
   "source": "src/index.ts",
   "types": "./types/index.d.ts",
-  "main": "dist/cjs",
-  "module": "dist/esm",
+  "main": "src/index.ts",
   "files": [
-    "dist",
     "src",
     "types"
   ],
