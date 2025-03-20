@@ -1,0 +1,69 @@
+import type { IconProps } from "@tamagui/helpers-icon";
+import { themed } from "@tamagui/helpers-icon";
+import PropTypes from "prop-types";
+import React, { memo } from "react";
+import type { NamedExoticComponent } from "react";
+import {
+	Defs,
+	Ellipse,
+	G,
+	Line,
+	LinearGradient,
+	Path,
+	Polygon,
+	Polyline,
+	RadialGradient,
+	Rect,
+	Stop,
+	Svg,
+	Symbol,
+	Use,
+	Circle as _Circle,
+	Text as _Text,
+} from "react-native-svg";
+
+const Icon = (props) => {
+	const { color = "black", size = 24, ...otherProps } = props;
+	return (
+		<Svg viewBox="0 0 256 256" {...otherProps}>
+			<Rect width="256" height="256" fill="none" />
+			<Path
+				d="M191.11,112.89c24-24,25.5-52.55,24.75-65.28a8,8,0,0,0-7.47-7.47c-12.73-.75-41.26.73-65.28,24.75L80,128l48,48Z"
+				fill="none"
+				stroke={color}
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="24"
+			/>
+			<Path
+				d="M136,72H74.35a8,8,0,0,0-5.65,2.34L34.35,108.69a8,8,0,0,0,4.53,13.57L80,128"
+				fill="none"
+				stroke={color}
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="24"
+			/>
+			<Path
+				d="M184,120v61.65a8,8,0,0,1-2.34,5.65l-34.35,34.35a8,8,0,0,1-13.57-4.53L128,176"
+				fill="none"
+				stroke={color}
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="24"
+			/>
+			<Path
+				d="M90.36,194.93C83.55,204.2,69.15,216,40,216c0-29.15,11.8-43.55,21.07-50.36"
+				fill="none"
+				stroke={color}
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="24"
+			/>
+		</Svg>
+	);
+};
+
+Icon.displayName = "RocketLaunchBold";
+
+export const RocketLaunchBold: NamedExoticComponent<IconProps> =
+	memo<IconProps>(themed(Icon));

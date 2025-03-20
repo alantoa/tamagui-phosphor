@@ -1,0 +1,38 @@
+import type { IconProps } from "@tamagui/helpers-icon";
+import { themed } from "@tamagui/helpers-icon";
+import PropTypes from "prop-types";
+import React, { memo } from "react";
+import type { NamedExoticComponent } from "react";
+import {
+	Defs,
+	Ellipse,
+	G,
+	Line,
+	LinearGradient,
+	Path,
+	Polygon,
+	Polyline,
+	RadialGradient,
+	Rect,
+	Stop,
+	Svg,
+	Symbol,
+	Use,
+	Circle as _Circle,
+	Text as _Text,
+} from "react-native-svg";
+
+const Icon = (props) => {
+	const { color = "black", size = 24, ...otherProps } = props;
+	return (
+		<Svg viewBox="0 0 256 256" {...otherProps}>
+			<Rect width="256" height="256" fill="none" />
+			<Path d="M203.06,40.61a8,8,0,0,0-8.72,1.73L128,108.69V48a8,8,0,0,0-13.66-5.66l-80,80a8,8,0,0,0,0,11.32l80,80A8,8,0,0,0,128,208V147.31l66.34,66.35A8,8,0,0,0,208,208V48A8,8,0,0,0,203.06,40.61Z" />
+		</Svg>
+	);
+};
+
+Icon.displayName = "CaretDoubleLeftFill";
+
+export const CaretDoubleLeftFill: NamedExoticComponent<IconProps> =
+	memo<IconProps>(themed(Icon));

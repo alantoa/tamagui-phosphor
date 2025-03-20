@@ -1,0 +1,66 @@
+import type { IconProps } from "@tamagui/helpers-icon";
+import { themed } from "@tamagui/helpers-icon";
+import PropTypes from "prop-types";
+import React, { memo } from "react";
+import type { NamedExoticComponent } from "react";
+import {
+	Defs,
+	Ellipse,
+	G,
+	Line,
+	LinearGradient,
+	Path,
+	Polygon,
+	Polyline,
+	RadialGradient,
+	Rect,
+	Stop,
+	Svg,
+	Symbol,
+	Use,
+	Circle as _Circle,
+	Text as _Text,
+} from "react-native-svg";
+
+const Icon = (props) => {
+	const { color = "black", size = 24, ...otherProps } = props;
+	return (
+		<Svg viewBox="0 0 256 256" {...otherProps}>
+			<Rect width="256" height="256" fill="none" />
+			<_Circle
+				cx="128"
+				cy="64"
+				r="32"
+				fill="none"
+				stroke={color}
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="24"
+			/>
+			<Line
+				x1="128"
+				y1="96"
+				x2="128"
+				y2="176"
+				fill="none"
+				stroke={color}
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="24"
+			/>
+			<Path
+				d="M172,139.75c35.44,6.37,60,20.21,60,36.25,0,22.09-46.56,40-104,40S24,198.09,24,176c0-16,24.56-29.88,60-36.25"
+				fill="none"
+				stroke={color}
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="24"
+			/>
+		</Svg>
+	);
+};
+
+Icon.displayName = "MapPinSimpleAreaBold";
+
+export const MapPinSimpleAreaBold: NamedExoticComponent<IconProps> =
+	memo<IconProps>(themed(Icon));

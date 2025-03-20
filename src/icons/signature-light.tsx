@@ -1,0 +1,57 @@
+import type { IconProps } from "@tamagui/helpers-icon";
+import { themed } from "@tamagui/helpers-icon";
+import PropTypes from "prop-types";
+import React, { memo } from "react";
+import type { NamedExoticComponent } from "react";
+import {
+	Defs,
+	Ellipse,
+	G,
+	Line,
+	LinearGradient,
+	Path,
+	Polygon,
+	Polyline,
+	RadialGradient,
+	Rect,
+	Stop,
+	Svg,
+	Symbol,
+	Use,
+	Circle as _Circle,
+	Text as _Text,
+} from "react-native-svg";
+
+const Icon = (props) => {
+	const { color = "black", size = 24, ...otherProps } = props;
+	return (
+		<Svg viewBox="0 0 256 256" {...otherProps}>
+			<Rect width="256" height="256" fill="none" />
+			<Line
+				x1="24"
+				y1="176"
+				x2="232"
+				y2="176"
+				fill="none"
+				stroke={color}
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="12"
+			/>
+			<Path
+				d="M24,224S139.52,32,77.91,32C32.07,32,31.58,225.11,128,104.19c0,0,8.11,39.44,27.23,39.81,7.72.15,17.25-6.31,28.77-24,0,0,0,24,48,24"
+				fill="none"
+				stroke={color}
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="12"
+			/>
+		</Svg>
+	);
+};
+
+Icon.displayName = "SignatureLight";
+
+export const SignatureLight: NamedExoticComponent<IconProps> = memo<IconProps>(
+	themed(Icon),
+);

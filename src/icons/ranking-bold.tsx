@@ -1,0 +1,81 @@
+import type { IconProps } from "@tamagui/helpers-icon";
+import { themed } from "@tamagui/helpers-icon";
+import PropTypes from "prop-types";
+import React, { memo } from "react";
+import type { NamedExoticComponent } from "react";
+import {
+	Defs,
+	Ellipse,
+	G,
+	Line,
+	LinearGradient,
+	Path,
+	Polygon,
+	Polyline,
+	RadialGradient,
+	Rect,
+	Stop,
+	Svg,
+	Symbol,
+	Use,
+	Circle as _Circle,
+	Text as _Text,
+} from "react-native-svg";
+
+const Icon = (props) => {
+	const { color = "black", size = 24, ...otherProps } = props;
+	return (
+		<Svg viewBox="0 0 256 256" {...otherProps}>
+			<Rect width="256" height="256" fill="none" />
+			<Path
+				d="M32,208V104a8,8,0,0,1,8-8H88"
+				fill="none"
+				stroke={color}
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="24"
+			/>
+			<Path
+				d="M88,208V56a8,8,0,0,1,8-8h64a8,8,0,0,1,8,8V208"
+				fill="none"
+				stroke={color}
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="24"
+			/>
+			<Path
+				d="M224,208V144a8,8,0,0,0-8-8H168"
+				fill="none"
+				stroke={color}
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="24"
+			/>
+			<Polyline
+				points="120 100 132 96 132 136"
+				fill="none"
+				stroke={color}
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="24"
+			/>
+			<Line
+				x1="16"
+				y1="208"
+				x2="240"
+				y2="208"
+				fill="none"
+				stroke={color}
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="24"
+			/>
+		</Svg>
+	);
+};
+
+Icon.displayName = "RankingBold";
+
+export const RankingBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+	themed(Icon),
+);

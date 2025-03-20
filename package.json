@@ -8,8 +8,7 @@
   "module": "dist/index.mjs",
   "react-native": "dist/index.mjs",
   "files": [
-    "dist",
-    "types"
+    "src",,
   ],
   "scripts": {
     "prepare": "bun run generate",
@@ -53,8 +52,7 @@
     "uppercamelcase": "^3.0.0"
   },
   "resolutions": {
-    "@types/react": "^18.2.44",
-    "phosphor-react-native": "^2.2.3"
+    "@types/react": "^18.2.44"
   },
   "peerDependencies": {
     "@types/react": "*",

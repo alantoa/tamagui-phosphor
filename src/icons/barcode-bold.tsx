@@ -1,0 +1,103 @@
+import type { IconProps } from "@tamagui/helpers-icon";
+import { themed } from "@tamagui/helpers-icon";
+import PropTypes from "prop-types";
+import React, { memo } from "react";
+import type { NamedExoticComponent } from "react";
+import {
+	Defs,
+	Ellipse,
+	G,
+	Line,
+	LinearGradient,
+	Path,
+	Polygon,
+	Polyline,
+	RadialGradient,
+	Rect,
+	Stop,
+	Svg,
+	Symbol,
+	Use,
+	Circle as _Circle,
+	Text as _Text,
+} from "react-native-svg";
+
+const Icon = (props) => {
+	const { color = "black", size = 24, ...otherProps } = props;
+	return (
+		<Svg viewBox="0 0 256 256" {...otherProps}>
+			<Rect width="256" height="256" fill="none" />
+			<Polyline
+				points="180 52 220 52 220 92"
+				fill="none"
+				stroke={color}
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="24"
+			/>
+			<Polyline
+				points="76 204 36 204 36 164"
+				fill="none"
+				stroke={color}
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="24"
+			/>
+			<Polyline
+				points="220 164 220 204 180 204"
+				fill="none"
+				stroke={color}
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="24"
+			/>
+			<Polyline
+				points="36 92 36 52 76 52"
+				fill="none"
+				stroke={color}
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="24"
+			/>
+			<Line
+				x1="88"
+				y1="92"
+				x2="88"
+				y2="164"
+				fill="none"
+				stroke={color}
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="24"
+			/>
+			<Line
+				x1="168"
+				y1="92"
+				x2="168"
+				y2="164"
+				fill="none"
+				stroke={color}
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="24"
+			/>
+			<Line
+				x1="128"
+				y1="92"
+				x2="128"
+				y2="164"
+				fill="none"
+				stroke={color}
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="24"
+			/>
+		</Svg>
+	);
+};
+
+Icon.displayName = "BarcodeBold";
+
+export const BarcodeBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+	themed(Icon),
+);
