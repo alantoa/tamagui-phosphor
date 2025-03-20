@@ -9,8 +9,7 @@
   "module": "dist/esm",
   "react-native": "dist/index.mjs",
   "files": [
-    "dist",
-    "types"
+    "dist"
   ],
   "scripts": {
     "build": "tamagui-build",
