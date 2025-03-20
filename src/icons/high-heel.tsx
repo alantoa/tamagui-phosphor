@@ -25,9 +25,9 @@ import { themed } from '@tamagui/helpers-icon'
 const Icon = (props) => {
   const { color = 'black', size = 24, ...otherProps } = props
   return (
-    <Svg viewBox="0 0 256 256" {...otherProps}>
-      <SvgRect width="256" height="256" fill="none" />
-      <SvgRect width="256" height="256" fill="#a0a0a0" opacity="0" />
+    <Svg viewBox="0 0 256 256" width={size} height={size} {...otherProps}>
+      <SvgRect width={size} height={size} fill="none" />
+      <SvgRect width={size} height={size} fill="#a0a0a0" opacity="0" />
       <SvgPath
         d="M32,120c50.38,0,93.51,31.28,111.3,75.08a8,8,0,0,0,7.42,4.92H240a8,8,0,0,0,8-8v-4.73A23.92,23.92,0,0,0,229.21,164L176,152,64,40C44.59,61.22,32,89,32,120Z"
         fill="none"

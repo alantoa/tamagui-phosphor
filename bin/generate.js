@@ -64,7 +64,9 @@ icons.forEach((i) => {
     }
 
     if (el.name === 'svg') {
-      $(el).attr('otherProps', '...');
+      $(el).attr('width', '{size}');
+      $(el).attr('height', '{size}');
+      $(el).attr('otherProps', '{...otherProps}');
     }
   });
 
@@ -103,9 +105,9 @@ icons.forEach((i) => {
           .replace(/ class=\"[^\"]+\"/g, '')
           .replace(/ version=\"[^\"]+\"/g, '')
           .replace(new RegExp('stroke="currentColor"', 'g'), 'stroke={color}')
-          .replace('width="24"', 'width={size}')
-          .replace('height="24"', 'height={size}')
-          .replace('otherProps="..."', '{...otherProps}')
+          .replace('otherProps="{...otherProps}"', '{...otherProps}')
+          .replace(new RegExp('width="[^"]+"', 'g'), `width={size}`)
+          .replace(new RegExp('height="[^"]+"', 'g'), `height={size}`)
           .replace('<svg', '<Svg')
           .replace('</svg', '</Svg')
           .replace(new RegExp('<circle', 'g'), '<_Circle')

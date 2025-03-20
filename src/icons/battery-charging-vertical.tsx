@@ -25,8 +25,8 @@ import { themed } from '@tamagui/helpers-icon'
 const Icon = (props) => {
   const { color = 'black', size = 24, ...otherProps } = props
   return (
-    <Svg viewBox="0 0 256 256" {...otherProps}>
-      <SvgRect width="256" height="256" fill="none" />
+    <Svg viewBox="0 0 256 256" width={size} height={size} {...otherProps}>
+      <SvgRect width={size} height={size} fill="none" />
       <SvgPolyline
         points="128 168 144 136 112 136 128 104"
         fill="none"
@@ -49,8 +49,8 @@ const Icon = (props) => {
       <SvgRect
         x="64"
         y="40"
-        width="128"
-        height="200"
+        width={size}
+        height={size}
         rx="16"
         fill="none"
         stroke={color}

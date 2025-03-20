@@ -25,13 +25,13 @@ import { themed } from '@tamagui/helpers-icon'
 const Icon = (props) => {
   const { color = 'black', size = 24, ...otherProps } = props
   return (
-    <Svg viewBox="0 0 256 256" {...otherProps}>
-      <SvgRect width="256" height="256" fill="none" />
+    <Svg viewBox="0 0 256 256" width={size} height={size} {...otherProps}>
+      <SvgRect width={size} height={size} fill="none" />
       <SvgRect
         x="99.72"
         y="35.72"
-        width="56.57"
-        height="56.57"
+        width={size}
+        height={size}
         transform="translate(-7.76 109.25) rotate(-45)"
         fill="none"
         stroke={color}
@@ -42,8 +42,8 @@ const Icon = (props) => {
       <SvgRect
         x="99.72"
         y="163.72"
-        width="56.57"
-        height="56.57"
+        width={size}
+        height={size}
         transform="translate(-98.27 146.75) rotate(-45)"
         fill="none"
         stroke={color}
@@ -54,8 +54,8 @@ const Icon = (props) => {
       <SvgRect
         x="163.72"
         y="99.72"
-        width="56.57"
-        height="56.57"
+        width={size}
+        height={size}
         transform="translate(-34.27 173.25) rotate(-45)"
         fill="none"
         stroke={color}
@@ -66,8 +66,8 @@ const Icon = (props) => {
       <SvgRect
         x="35.72"
         y="99.72"
-        width="56.57"
-        height="56.57"
+        width={size}
+        height={size}
         transform="translate(-71.76 82.75) rotate(-45)"
         fill="none"
         stroke={color}
