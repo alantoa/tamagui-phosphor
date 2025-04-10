@@ -5,20 +5,20 @@ import type { IconProps } from '@tamagui/helpers-icon'
 import {
   Svg,
   Circle as _Circle,
-  Ellipse,
+  Ellipse as SvgEllipse,
   G,
   LinearGradient,
   RadialGradient,
   Line,
-  Path,
-  Polygon,
-  Polyline,
-  Rect,
-  Symbol,
+  Path as SvgPath,
+  Polygon as SvgPolygon,
+  Polyline as SvgPolyline,
+  Rect as SvgRect,
+  Symbol as SvgSymbol,
   Text as _Text,
   Use,
   Defs,
-  Stop,
+  Stop as SvgStop,
 } from 'react-native-svg'
 import { themed } from '@tamagui/helpers-icon'
 
@@ -32,7 +32,7 @@ const Icon = (props) => {
       fill="currentColor"
       {...otherProps}
     >
-      <Rect width="256" height="256" fill="none" />
+      <SvgRect width="256" height="256" fill="none" />
       <Line
         x1="128"
         y1="64"
@@ -44,7 +44,7 @@ const Icon = (props) => {
         strokeLinejoin="round"
         strokeWidth="16"
       />
-      <Polyline
+      <SvgPolyline
         points="104 40 128 64 152 40"
         fill="none"
         stroke={color}
@@ -52,7 +52,7 @@ const Icon = (props) => {
         strokeLinejoin="round"
         strokeWidth="16"
       />
-      <Polyline
+      <SvgPolyline
         points="104 216 128 192 152 216"
         fill="none"
         stroke={color}
@@ -71,7 +71,7 @@ const Icon = (props) => {
         strokeLinejoin="round"
         strokeWidth="16"
       />
-      <Polyline
+      <SvgPolyline
         points="40 104 72.57 96 64 64"
         fill="none"
         stroke={color}
@@ -79,7 +79,7 @@ const Icon = (props) => {
         strokeLinejoin="round"
         strokeWidth="16"
       />
-      <Polyline
+      <SvgPolyline
         points="192 192 183.43 160 216 152"
         fill="none"
         stroke={color}
@@ -98,7 +98,7 @@ const Icon = (props) => {
         strokeLinejoin="round"
         strokeWidth="16"
       />
-      <Polyline
+      <SvgPolyline
         points="64 192 72.57 160 40 152"
         fill="none"
         stroke={color}
@@ -106,7 +106,7 @@ const Icon = (props) => {
         strokeLinejoin="round"
         strokeWidth="16"
       />
-      <Polyline
+      <SvgPolyline
         points="216 104 183.43 96 192 64"
         fill="none"
         stroke={color}
