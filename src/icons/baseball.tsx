@@ -5,20 +5,20 @@ import type { IconProps } from '@tamagui/helpers-icon'
 import {
   Svg,
   Circle as _Circle,
-  Ellipse as SvgEllipse,
+  Ellipse,
   G,
   LinearGradient,
   RadialGradient,
   Line,
-  Path as SvgPath,
-  Polygon as SvgPolygon,
-  Polyline as SvgPolyline,
-  Rect as SvgRect,
-  Symbol as SvgSymbol,
+  Path,
+  Polygon,
+  Polyline,
+  Rect,
+  Symbol,
   Text as _Text,
   Use,
   Defs,
-  Stop as SvgStop,
+  Stop,
 } from 'react-native-svg'
 import { themed } from '@tamagui/helpers-icon'
 
@@ -27,12 +27,12 @@ const Icon = (props) => {
   return (
     <Svg
       viewBox="0 0 256 256"
-      width={size}
-      height={size}
+      width="{size}"
+      height="{size}"
       fill="currentColor"
-      {...otherProps}
+      otherProps="{...otherProps}"
     >
-      <SvgRect width={size} height={size} fill="none" />
+      <Rect width="256" height="256" fill="none" />
       <_Circle
         cx="128"
         cy="128"
@@ -43,7 +43,7 @@ const Icon = (props) => {
         strokeLinejoin="round"
         strokeWidth="16"
       />
-      <SvgPath
+      <Path
         d="M88,144a94.87,94.87,0,0,1-4.14,16"
         fill="none"
         stroke={color}
@@ -51,7 +51,7 @@ const Icon = (props) => {
         strokeLinejoin="round"
         strokeWidth="16"
       />
-      <SvgPath
+      <Path
         d="M83.86,96A94.87,94.87,0,0,1,88,112"
         fill="none"
         stroke={color}
@@ -59,7 +59,7 @@ const Icon = (props) => {
         strokeLinejoin="round"
         strokeWidth="16"
       />
-      <SvgPath
+      <Path
         d="M60.66,59.58A94.93,94.93,0,0,1,68.27,68"
         fill="none"
         stroke={color}
@@ -67,7 +67,7 @@ const Icon = (props) => {
         strokeLinejoin="round"
         strokeWidth="16"
       />
-      <SvgPath
+      <Path
         d="M68.27,188a94.93,94.93,0,0,1-7.61,8.42"
         fill="none"
         stroke={color}
@@ -75,7 +75,7 @@ const Icon = (props) => {
         strokeLinejoin="round"
         strokeWidth="16"
       />
-      <SvgPath
+      <Path
         d="M168,144a94.87,94.87,0,0,0,4.14,16"
         fill="none"
         stroke={color}
@@ -83,7 +83,7 @@ const Icon = (props) => {
         strokeLinejoin="round"
         strokeWidth="16"
       />
-      <SvgPath
+      <Path
         d="M172.14,96A94.87,94.87,0,0,0,168,112"
         fill="none"
         stroke={color}
@@ -91,7 +91,7 @@ const Icon = (props) => {
         strokeLinejoin="round"
         strokeWidth="16"
       />
-      <SvgPath
+      <Path
         d="M195.34,59.58A94.93,94.93,0,0,0,187.73,68"
         fill="none"
         stroke={color}
@@ -99,7 +99,7 @@ const Icon = (props) => {
         strokeLinejoin="round"
         strokeWidth="16"
       />
-      <SvgPath
+      <Path
         d="M187.73,188a94.93,94.93,0,0,0,7.61,8.42"
         fill="none"
         stroke={color}

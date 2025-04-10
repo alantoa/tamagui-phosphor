@@ -74,81 +74,81 @@ icons.forEach((i) => {
   const cname = uppercamelcase(id);
 
   const out = `
-    import React, { memo } from 'react'
-    import PropTypes from 'prop-types'
-    import type { NamedExoticComponent } from 'react'
-    import type { IconProps } from '@tamagui/helpers-icon'
-    import {
-      Svg,
-      Circle as _Circle,
-      Ellipse as SvgEllipse,
-      G,
-      LinearGradient,
-      RadialGradient, 
-      Line,
-      Path as SvgPath,
-      Polygon as SvgPolygon,
-      Polyline as SvgPolyline,
-      Rect as SvgRect,
-      Symbol as SvgSymbol,
-      Text as _Text,
-      Use,
-      Defs,
-      Stop as SvgStop
-    } from 'react-native-svg'
-    import { themed } from '@tamagui/helpers-icon'
+  import React, { memo } from 'react'
+  import PropTypes from 'prop-types'
+  import type { NamedExoticComponent } from 'react'
+  import type { IconProps } from '@tamagui/helpers-icon'
+  import {
+    Svg,
+    Circle as _Circle,
+    Ellipse,
+    G,
+    LinearGradient,
+    RadialGradient, 
+    Line,
+    Path,
+    Polygon,
+    Polyline,
+    Rect,
+    Symbol,
+    Text as _Text,
+    Use,
+    Defs,
+    Stop
+  } from 'react-native-svg'
+  import { themed } from '@tamagui/helpers-icon'
 
-    const Icon = (props) => {
-      const { color = 'black', size = 24, ...otherProps } = props
-      return (
-        ${$('svg')
-          .toString()
-          .replace(/ class=\"[^\"]+\"/g, '')
-          .replace(/ version=\"[^\"]+\"/g, '')
-          .replace(new RegExp('stroke="currentColor"', 'g'), 'stroke={color}')
-          .replace('otherProps="{...otherProps}"', '{...otherProps}')
-          .replace(new RegExp('width="[^"]+"', 'g'), `width={size}`)
-          .replace(new RegExp('height="[^"]+"', 'g'), `height={size}`)
-          .replace('<svg', '<Svg')
-          .replace('</svg', '</Svg')
-          .replace(new RegExp('<circle', 'g'), '<_Circle')
-          .replace(new RegExp('</circle', 'g'), '</_Circle')
-          .replace(new RegExp('<ellipse', 'g'), '<SvgEllipse')
-          .replace(new RegExp('</ellipse', 'g'), '</SvgEllipse')
-          .replace(new RegExp('<g', 'g'), '<G')
-          .replace(new RegExp('</g', 'g'), '</G')
-          .replace(new RegExp('<linear-gradient', 'g'), '<LinearGradient')
-          .replace(new RegExp('</linear-gradient', 'g'), '</LinearGradient')
-          .replace(new RegExp('<radial-gradient', 'g'), '<RadialGradient')
-          .replace(new RegExp('</radial-gradient', 'g'), '</RadialGradient')
-          .replace(new RegExp('<path', 'g'), '<SvgPath')
-          .replace(new RegExp('</path', 'g'), '</SvgPath')
-          .replace(new RegExp('<line', 'g'), '<Line')
-          .replace(new RegExp('</line', 'g'), '</Line')
-          .replace(new RegExp('<polygon', 'g'), '<SvgPolygon')
-          .replace(new RegExp('</polygon', 'g'), '</SvgPolygon')
-          .replace(new RegExp('<polyline', 'g'), '<SvgPolyline')
-          .replace(new RegExp('</polyline', 'g'), '</SvgPolyline')
-          .replace(new RegExp('<rect', 'g'), '<SvgRect')
-          .replace(new RegExp('</rect', 'g'), '</SvgRect')
-          .replace(new RegExp('<symbol', 'g'), '<SvgSymbol')
-          .replace(new RegExp('</symbol', 'g'), '</SvgSymbol')
-          .replace(new RegExp('<text', 'g'), '<_Text')
-          .replace(new RegExp('</text', 'g'), '</_Text')
-          .replace(new RegExp('<use', 'g'), '<Use')
-          .replace(new RegExp('</use', 'g'), '</Use')
-          .replace(new RegExp('<defs', 'g'), '<Defs')
-          .replace(new RegExp('</defs', 'g'), '</Defs')
-          .replace(new RegExp('<stop', 'g'), '<SvgStop')
-          .replace(new RegExp('</stop', 'g'), '</SvgStop')
-          .replace(new RegExp('px', 'g'), '')}
-      )
-    }
+  const Icon = (props) => {
+    const { color = 'black', size = 24, ...otherProps } = props
+    return (
+      ${$('svg')
+        .toString()
+        .replace(/ class=\"[^\"]+\"/g, '')
+        .replace(/ version=\"[^\"]+\"/g, '')
+        .replace(new RegExp('stroke="currentColor"', 'g'), 'stroke={color}')
+        .replace('width="24"', 'width={size}')
+        .replace('height="24"', 'height={size}')
+        .replace('otherProps="..."', '{...otherProps}')
+        .replace('<svg', '<Svg')
+        .replace('</svg', '</Svg')
+        .replace(new RegExp('<circle', 'g'), '<_Circle')
+        .replace(new RegExp('</circle', 'g'), '</_Circle')
+        .replace(new RegExp('<ellipse', 'g'), '<Ellipse')
+        .replace(new RegExp('</ellipse', 'g'), '</Ellipse')
+        .replace(new RegExp('<g', 'g'), '<G')
+        .replace(new RegExp('</g', 'g'), '</G')
+        .replace(new RegExp('<linear-gradient', 'g'), '<LinearGradient')
+        .replace(new RegExp('</linear-gradient', 'g'), '</LinearGradient')
+        .replace(new RegExp('<radial-gradient', 'g'), '<RadialGradient')
+        .replace(new RegExp('</radial-gradient', 'g'), '</RadialGradient')
+        .replace(new RegExp('<path', 'g'), '<Path')
+        .replace(new RegExp('</path', 'g'), '</Path')
+        .replace(new RegExp('<line', 'g'), '<Line')
+        .replace(new RegExp('</line', 'g'), '</Line')
+        .replace(new RegExp('<polygon', 'g'), '<Polygon')
+        .replace(new RegExp('</polygon', 'g'), '</Polygon')
+        .replace(new RegExp('<polyline', 'g'), '<Polyline')
+        .replace(new RegExp('</polyline', 'g'), '</Polyline')
+        .replace(new RegExp('<rect', 'g'), '<Rect')
+        .replace(new RegExp('</rect', 'g'), '</Rect')
+        .replace(new RegExp('<symbol', 'g'), '<Symbol')
+        .replace(new RegExp('</symbol', 'g'), '</Symbol')
+        .replace(new RegExp('<text', 'g'), '<_Text')
+        .replace(new RegExp('</text', 'g'), '</_Text')
+        .replace(new RegExp('<use', 'g'), '<Use')
+        .replace(new RegExp('</use', 'g'), '</Use')
+        .replace(new RegExp('<defs', 'g'), '<Defs')
+        .replace(new RegExp('</defs', 'g'), '</Defs')
+        .replace(new RegExp('<stop', 'g'), '<Stop')
+        .replace(new RegExp('</stop', 'g'), '</Stop')
+        .replace(new RegExp('px', 'g'), '')}
+    )
+  }
 
-    Icon.displayName = '${cname}'
+  Icon.displayName = '${cname}'
 
-    export const ${cname}: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
-  `;
+  export const ${cname}: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+`;
 
   fs.writeFileSync(location, out, 'utf-8');
 

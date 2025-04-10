@@ -5,20 +5,20 @@ import type { IconProps } from '@tamagui/helpers-icon'
 import {
   Svg,
   Circle as _Circle,
-  Ellipse as SvgEllipse,
+  Ellipse,
   G,
   LinearGradient,
   RadialGradient,
   Line,
-  Path as SvgPath,
-  Polygon as SvgPolygon,
-  Polyline as SvgPolyline,
-  Rect as SvgRect,
-  Symbol as SvgSymbol,
+  Path,
+  Polygon,
+  Polyline,
+  Rect,
+  Symbol,
   Text as _Text,
   Use,
   Defs,
-  Stop as SvgStop,
+  Stop,
 } from 'react-native-svg'
 import { themed } from '@tamagui/helpers-icon'
 
@@ -27,13 +27,13 @@ const Icon = (props) => {
   return (
     <Svg
       viewBox="0 0 256 256"
-      width={size}
-      height={size}
+      width="{size}"
+      height="{size}"
       fill="currentColor"
-      {...otherProps}
+      otherProps="{...otherProps}"
     >
-      <SvgRect width={size} height={size} fill="none" />
-      <SvgEllipse
+      <Rect width="256" height="256" fill="none" />
+      <Ellipse
         cx="104"
         cy="128"
         rx="56"
@@ -44,7 +44,7 @@ const Icon = (props) => {
         strokeLinejoin="round"
         strokeWidth="24"
       />
-      <SvgPath
+      <Path
         d="M104,32h48c30.93,0,56,43,56,96s-25.07,96-56,96H104"
         fill="none"
         stroke={color}

@@ -5,20 +5,20 @@ import type { IconProps } from '@tamagui/helpers-icon'
 import {
   Svg,
   Circle as _Circle,
-  Ellipse as SvgEllipse,
+  Ellipse,
   G,
   LinearGradient,
   RadialGradient,
   Line,
-  Path as SvgPath,
-  Polygon as SvgPolygon,
-  Polyline as SvgPolyline,
-  Rect as SvgRect,
-  Symbol as SvgSymbol,
+  Path,
+  Polygon,
+  Polyline,
+  Rect,
+  Symbol,
   Text as _Text,
   Use,
   Defs,
-  Stop as SvgStop,
+  Stop,
 } from 'react-native-svg'
 import { themed } from '@tamagui/helpers-icon'
 
@@ -27,12 +27,12 @@ const Icon = (props) => {
   return (
     <Svg
       viewBox="0 0 256 256"
-      width={size}
-      height={size}
+      width="{size}"
+      height="{size}"
       fill="currentColor"
-      {...otherProps}
+      otherProps="{...otherProps}"
     >
-      <SvgRect width={size} height={size} fill="none" />
+      <Rect width="256" height="256" fill="none" />
       <_Circle
         cx="128"
         cy="56"
@@ -44,7 +44,7 @@ const Icon = (props) => {
         strokeWidth="16"
       />
       <_Circle cx="64" cy="96" r="16" />
-      <SvgPath
+      <Path
         d="M216,105.6s-32-25.67-80,7c-50.47,34.3-80,20.85-80,20.85"
         fill="none"
         stroke={color}
@@ -52,7 +52,7 @@ const Icon = (props) => {
         strokeLinejoin="round"
         strokeWidth="16"
       />
-      <SvgPath
+      <Path
         d="M143.89,107.62C143,126.17,144,208,64,232"
         fill="none"
         stroke={color}
@@ -60,7 +60,7 @@ const Icon = (props) => {
         strokeLinejoin="round"
         strokeWidth="16"
       />
-      <SvgPolyline
+      <Polyline
         points="139.94 145.95 176 176 160 224"
         fill="none"
         stroke={color}

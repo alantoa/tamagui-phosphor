@@ -1,9 +1,9 @@
 import { Text, YStack, XStack, ScrollView, Input } from 'tamagui';
 import { FlatList, ListRenderItem } from 'react-native';
-import * as Icons from 'tamagui-phosphor';
+import * as Icons from '../../src';
 import { useState, useCallback, useEffect, useMemo, memo } from 'react';
 
-type TabType = 'Bold' | 'Fill' | 'Others';
+type TabType = 'Regular' | 'Bold' | 'Fill';
 type IconType = [string, any];
 type IconItemProps = {
   name: string;
@@ -80,8 +80,8 @@ const TabButton = memo(
 
 export function HomePage() {
   const [searchQuery, setSearchQuery] = useState('');
-  const [debouncedQuery, setDebouncedQuery] = useState('');
-  const [activeTab, setActiveTab] = useState<TabType>('Bold');
+  const [debouncedQuery, setDebouncedQuery] = useState('calendar');
+  const [activeTab, setActiveTab] = useState<TabType>('Regular');
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -92,7 +92,6 @@ export function HomePage() {
   }, [searchQuery]);
 
   const groupedIcons = useMemo(() => {
-    console.log('Computing groupedIcons');
     return Object.entries(Icons).reduce(
       (acc, [name, Icon]) => {
         if (name.includes('Bold')) {
@@ -100,20 +99,19 @@ export function HomePage() {
         } else if (name.includes('Fill')) {
           acc.Fill.push([name, Icon]);
         } else {
-          acc.Others.push([name, Icon]);
+          acc.Regular.push([name, Icon]);
         }
         return acc;
       },
       {
         Bold: [] as IconType[],
         Fill: [] as IconType[],
-        Others: [] as IconType[],
+        Regular: [] as IconType[],
       }
     );
   }, []);
 
   const filteredIcons = useMemo(() => {
-    console.log('Computing filteredIcons');
     return groupedIcons[activeTab].filter(([name]) =>
       name.toLowerCase().includes(debouncedQuery.toLowerCase())
     );
@@ -148,7 +146,7 @@ export function HomePage() {
           Phosphor Icons
         </Text>
         <XStack space="$2">
-          {(['Bold', 'Fill', 'Others'] as const).map((tab) => (
+          {(['Regular', 'Bold', 'Fill'] as const).map((tab) => (
             <TabButton
               key={tab}
               tab={tab}

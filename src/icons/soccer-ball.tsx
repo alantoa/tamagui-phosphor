@@ -5,20 +5,20 @@ import type { IconProps } from '@tamagui/helpers-icon'
 import {
   Svg,
   Circle as _Circle,
-  Ellipse as SvgEllipse,
+  Ellipse,
   G,
   LinearGradient,
   RadialGradient,
   Line,
-  Path as SvgPath,
-  Polygon as SvgPolygon,
-  Polyline as SvgPolyline,
-  Rect as SvgRect,
-  Symbol as SvgSymbol,
+  Path,
+  Polygon,
+  Polyline,
+  Rect,
+  Symbol,
   Text as _Text,
   Use,
   Defs,
-  Stop as SvgStop,
+  Stop,
 } from 'react-native-svg'
 import { themed } from '@tamagui/helpers-icon'
 
@@ -27,12 +27,12 @@ const Icon = (props) => {
   return (
     <Svg
       viewBox="0 0 256 256"
-      width={size}
-      height={size}
+      width="{size}"
+      height="{size}"
       fill="currentColor"
-      {...otherProps}
+      otherProps="{...otherProps}"
     >
-      <SvgRect width={size} height={size} fill="none" />
+      <Rect width="256" height="256" fill="none" />
       <_Circle
         cx="128"
         cy="128"
@@ -43,7 +43,7 @@ const Icon = (props) => {
         strokeLinejoin="round"
         strokeWidth="16"
       />
-      <SvgPolygon
+      <Polygon
         points="128 88 88 115.5 103.28 160 152.72 160 168 115.5 128 88"
         fill="none"
         stroke={color}
@@ -106,7 +106,7 @@ const Icon = (props) => {
         strokeLinejoin="round"
         strokeWidth="16"
       />
-      <SvgPolyline
+      <Polyline
         points="164.25 39.08 128 64 91.75 39.08"
         fill="none"
         stroke={color}
@@ -114,7 +114,7 @@ const Icon = (props) => {
         strokeLinejoin="round"
         strokeWidth="16"
       />
-      <SvgPolyline
+      <Polyline
         points="223.85 133.42 190.82 108.08 202.77 67.78"
         fill="none"
         stroke={color}
@@ -122,7 +122,7 @@ const Icon = (props) => {
         strokeLinejoin="round"
         strokeWidth="16"
       />
-      <SvgPolyline
+      <Polyline
         points="53.23 67.78 65.17 108.08 32.15 133.42"
         fill="none"
         stroke={color}
@@ -130,7 +130,7 @@ const Icon = (props) => {
         strokeLinejoin="round"
         strokeWidth="16"
       />
-      <SvgPolyline
+      <Polyline
         points="152.13 220.94 166.83 179.42 209.08 179.42"
         fill="none"
         stroke={color}
@@ -138,7 +138,7 @@ const Icon = (props) => {
         strokeLinejoin="round"
         strokeWidth="16"
       />
-      <SvgPolyline
+      <Polyline
         points="46.92 179.42 89.17 179.42 103.87 220.94"
         fill="none"
         stroke={color}
