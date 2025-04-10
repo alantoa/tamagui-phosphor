@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "example",
+    "slug": "example",
+    "sdkVersion": "52.0.0",
+    "newArchEnabled": true,
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "plugins": [
+      "vxrn/expo-plugin"
+    ],
+    "icon": "./src/app-icon.png",
+    "splash": {
+      "image": "./public/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "ios": {
+      "bundleIdentifier": "com.natew.oneexample"
+    },
+    "android": {
+      "package": "com.natew.oneexample"
+    }
+  }
+}
