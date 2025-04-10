@@ -2,8 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./src/*"],
-      "tamagui-phosphor": ["../src/index.ts"]
+      "~/*": ["./src/*"]
     },
     "strict": true,
     "rootDir": "..",

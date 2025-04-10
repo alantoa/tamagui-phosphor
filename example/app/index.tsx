@@ -1,6 +1,6 @@
 import { Text, YStack, XStack, ScrollView, Input } from 'tamagui';
 import { FlatList, ListRenderItem } from 'react-native';
-import * as Icons from '../../src';
+import * as Icons from 'tamagui-phosphor';
 import { useState, useCallback, useEffect, useMemo, memo } from 'react';
 
 type TabType = 'Regular' | 'Bold' | 'Fill';

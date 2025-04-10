@@ -64,10 +64,7 @@ icons.forEach((i) => {
     }
 
     if (el.name === 'svg') {
-      $(el).attr('width', '{size}');
-      $(el).attr('height', '{size}');
-      $(el).attr('fill', 'currentColor');
-      $(el).attr('otherProps', '{...otherProps}');
+      $(el).attr('otherProps', '...');
     }
   });
 
