@@ -2,6 +2,7 @@ import { Text, YStack, XStack, ScrollView, Input } from 'tamagui';
 import { FlatList, ListRenderItem } from 'react-native';
 import * as Icons from 'tamagui-phosphor';
 import { useState, useCallback, useEffect, useMemo, memo } from 'react';
+import useDebounce from './use-debouce';
 
 type TabType = 'Regular' | 'Bold' | 'Fill';
 type IconType = [string, any];
@@ -36,7 +37,7 @@ const IconItem = memo(({ name, Icon, activeTab }: IconItemProps) => {
         }}
         flex={1}
       >
-        <Icon size={32} />
+        <Icon size={24} color="red" />
       </YStack>
       <Text fontSize="$2" color="$color11" numberOfLines={1} p="$2">
         {name.replace(activeTab, '')}
@@ -80,16 +81,8 @@ const TabButton = memo(
 
 export function HomePage() {
   const [searchQuery, setSearchQuery] = useState('');
-  const [debouncedQuery, setDebouncedQuery] = useState('calendar');
   const [activeTab, setActiveTab] = useState<TabType>('Regular');
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setDebouncedQuery(searchQuery);
-    }, DEBOUNCE_DELAY);
-
-    return () => clearTimeout(timer);
-  }, [searchQuery]);
+  const debouncedQuery = useDebounce(searchQuery, DEBOUNCE_DELAY);
 
   const groupedIcons = useMemo(() => {
     return Object.entries(Icons).reduce(
@@ -146,7 +139,7 @@ export function HomePage() {
           Phosphor Icons
         </Text>
         <XStack space="$2">
-          {(['Regular', 'Bold', 'Fill'] as const).map((tab) => (
+          {(['Regular'] as const).map((tab) => (
             <TabButton
               key={tab}
               tab={tab}
