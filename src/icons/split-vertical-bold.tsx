@@ -99,6 +99,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'SplitVerticalBold'
 
-export const SplitVerticalBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const SplitVerticalBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

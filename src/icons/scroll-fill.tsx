@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ScrollFill'
 
-export const ScrollFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const ScrollFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

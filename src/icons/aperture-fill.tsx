@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ApertureFill'
 
-export const ApertureFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const ApertureFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

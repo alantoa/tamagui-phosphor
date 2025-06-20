@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'MatrixLogoFill'
 
-export const MatrixLogoFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const MatrixLogoFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

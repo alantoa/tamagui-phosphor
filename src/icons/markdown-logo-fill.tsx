@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'MarkdownLogoFill'
 
-export const MarkdownLogoFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const MarkdownLogoFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

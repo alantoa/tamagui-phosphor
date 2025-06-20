@@ -55,6 +55,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ApproximateEquals'
 
-export const ApproximateEquals: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const ApproximateEquals: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

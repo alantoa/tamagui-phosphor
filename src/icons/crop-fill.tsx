@@ -40,4 +40,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'CropFill'
 
-export const CropFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const CropFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

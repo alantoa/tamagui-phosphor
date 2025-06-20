@@ -69,4 +69,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'PlayPause'
 
-export const PlayPause: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const PlayPause: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

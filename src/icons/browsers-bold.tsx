@@ -70,4 +70,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'BrowsersBold'
 
-export const BrowsersBold: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const BrowsersBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

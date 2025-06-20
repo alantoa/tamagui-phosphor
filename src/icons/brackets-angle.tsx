@@ -55,6 +55,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'BracketsAngle'
 
-export const BracketsAngle: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const BracketsAngle: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

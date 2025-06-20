@@ -71,4 +71,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'MonitorPlay'
 
-export const MonitorPlay: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const MonitorPlay: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

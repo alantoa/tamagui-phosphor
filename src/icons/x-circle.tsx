@@ -71,4 +71,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'XCircle'
 
-export const XCircle: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const XCircle: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

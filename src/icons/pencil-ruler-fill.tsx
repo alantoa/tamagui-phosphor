@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'PencilRulerFill'
 
-export const PencilRulerFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const PencilRulerFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

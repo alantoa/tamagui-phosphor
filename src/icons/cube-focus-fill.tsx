@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'CubeFocusFill'
 
-export const CubeFocusFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const CubeFocusFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'CookieFill'
 
-export const CookieFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const CookieFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

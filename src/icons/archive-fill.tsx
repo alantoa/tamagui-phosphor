@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ArchiveFill'
 
-export const ArchiveFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const ArchiveFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

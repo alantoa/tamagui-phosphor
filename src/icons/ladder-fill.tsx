@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'LadderFill'
 
-export const LadderFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const LadderFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

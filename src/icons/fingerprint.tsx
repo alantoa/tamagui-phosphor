@@ -95,4 +95,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'Fingerprint'
 
-export const Fingerprint: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const Fingerprint: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

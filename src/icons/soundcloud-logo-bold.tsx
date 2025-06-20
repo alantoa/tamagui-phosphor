@@ -80,6 +80,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'SoundcloudLogoBold'
 
-export const SoundcloudLogoBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const SoundcloudLogoBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

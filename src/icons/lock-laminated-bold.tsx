@@ -81,6 +81,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'LockLaminatedBold'
 
-export const LockLaminatedBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const LockLaminatedBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

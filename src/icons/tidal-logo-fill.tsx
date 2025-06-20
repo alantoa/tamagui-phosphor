@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'TidalLogoFill'
 
-export const TidalLogoFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const TidalLogoFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

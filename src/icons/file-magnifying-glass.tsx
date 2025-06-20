@@ -76,6 +76,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'FileMagnifyingGlass'
 
-export const FileMagnifyingGlass: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const FileMagnifyingGlass: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

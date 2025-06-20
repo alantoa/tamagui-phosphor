@@ -73,6 +73,5 @@ const Icon = (props) => {
 
 Icon.displayName = 'GlobeHemisphereWestBold'
 
-export const GlobeHemisphereWestBold: NamedExoticComponent<IconProps> = memo<IconProps>(
-  themed(Icon)
-)
+export const GlobeHemisphereWestBold: (propsIn: IconProps) => JSX.Element =
+  memo<IconProps>(themed(Icon))

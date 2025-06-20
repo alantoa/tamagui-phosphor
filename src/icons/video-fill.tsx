@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'VideoFill'
 
-export const VideoFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const VideoFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

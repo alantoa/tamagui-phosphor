@@ -50,4 +50,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'LineVertical'
 
-export const LineVertical: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const LineVertical: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

@@ -48,4 +48,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'DotOutline'
 
-export const DotOutline: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const DotOutline: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

@@ -68,6 +68,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'AnchorSimpleBold'
 
-export const AnchorSimpleBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const AnchorSimpleBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

@@ -99,6 +99,5 @@ const Icon = (props) => {
 
 Icon.displayName = 'MicrosoftOutlookLogoBold'
 
-export const MicrosoftOutlookLogoBold: NamedExoticComponent<IconProps> = memo<IconProps>(
-  themed(Icon)
-)
+export const MicrosoftOutlookLogoBold: (propsIn: IconProps) => JSX.Element =
+  memo<IconProps>(themed(Icon))

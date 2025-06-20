@@ -126,4 +126,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'FileHtmlBold'
 
-export const FileHtmlBold: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const FileHtmlBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

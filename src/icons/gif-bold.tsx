@@ -77,4 +77,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'GifBold'
 
-export const GifBold: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const GifBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

@@ -78,6 +78,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'VirtualRealityBold'
 
-export const VirtualRealityBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const VirtualRealityBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

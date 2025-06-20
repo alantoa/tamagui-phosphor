@@ -40,5 +40,5 @@ const Icon = (props) => {
 
 Icon.displayName = 'AlignCenterHorizontalSimpleFill'
 
-export const AlignCenterHorizontalSimpleFill: NamedExoticComponent<IconProps> =
+export const AlignCenterHorizontalSimpleFill: (propsIn: IconProps) => JSX.Element =
   memo<IconProps>(themed(Icon))

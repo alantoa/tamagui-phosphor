@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'GraphFill'
 
-export const GraphFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const GraphFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

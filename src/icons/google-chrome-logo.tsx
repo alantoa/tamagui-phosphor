@@ -92,6 +92,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'GoogleChromeLogo'
 
-export const GoogleChromeLogo: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const GoogleChromeLogo: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

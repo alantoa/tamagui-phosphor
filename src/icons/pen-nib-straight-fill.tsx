@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'PenNibStraightFill'
 
-export const PenNibStraightFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const PenNibStraightFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

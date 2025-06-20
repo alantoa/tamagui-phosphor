@@ -69,6 +69,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'GitlabLogoBold'
 
-export const GitlabLogoBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const GitlabLogoBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

@@ -62,6 +62,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'PlaceholderBold'
 
-export const PlaceholderBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const PlaceholderBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

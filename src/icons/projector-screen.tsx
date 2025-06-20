@@ -105,6 +105,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ProjectorScreen'
 
-export const ProjectorScreen: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const ProjectorScreen: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

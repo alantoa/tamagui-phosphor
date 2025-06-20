@@ -65,6 +65,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'CaretCircleUpDownBold'
 
-export const CaretCircleUpDownBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const CaretCircleUpDownBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

@@ -41,4 +41,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'LassoFill'
 
-export const LassoFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const LassoFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

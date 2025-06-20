@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'AndroidLogoFill'
 
-export const AndroidLogoFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const AndroidLogoFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

@@ -71,4 +71,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'RepeatBold'
 
-export const RepeatBold: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const RepeatBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

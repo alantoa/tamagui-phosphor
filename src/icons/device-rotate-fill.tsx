@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'DeviceRotateFill'
 
-export const DeviceRotateFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const DeviceRotateFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

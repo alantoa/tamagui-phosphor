@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'CursorTextFill'
 
-export const CursorTextFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const CursorTextFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

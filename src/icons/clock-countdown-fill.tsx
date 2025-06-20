@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ClockCountdownFill'
 
-export const ClockCountdownFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const ClockCountdownFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

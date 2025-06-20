@@ -47,6 +47,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'Parallelogram'
 
-export const Parallelogram: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const Parallelogram: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

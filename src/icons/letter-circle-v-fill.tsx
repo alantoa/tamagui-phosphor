@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'LetterCircleVFill'
 
-export const LetterCircleVFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const LetterCircleVFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

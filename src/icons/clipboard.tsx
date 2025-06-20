@@ -55,4 +55,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'Clipboard'
 
-export const Clipboard: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const Clipboard: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

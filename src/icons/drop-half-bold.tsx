@@ -91,4 +91,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'DropHalfBold'
 
-export const DropHalfBold: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const DropHalfBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

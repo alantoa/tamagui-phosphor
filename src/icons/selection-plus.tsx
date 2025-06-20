@@ -129,6 +129,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'SelectionPlus'
 
-export const SelectionPlus: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const SelectionPlus: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

@@ -58,4 +58,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'PushPin'
 
-export const PushPin: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const PushPin: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

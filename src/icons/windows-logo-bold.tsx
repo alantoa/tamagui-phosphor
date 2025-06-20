@@ -71,6 +71,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'WindowsLogoBold'
 
-export const WindowsLogoBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const WindowsLogoBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

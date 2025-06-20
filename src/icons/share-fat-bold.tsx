@@ -47,4 +47,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ShareFatBold'
 
-export const ShareFatBold: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const ShareFatBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

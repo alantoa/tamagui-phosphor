@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'SimCardFill'
 
-export const SimCardFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const SimCardFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

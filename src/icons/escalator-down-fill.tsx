@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'EscalatorDownFill'
 
-export const EscalatorDownFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const EscalatorDownFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

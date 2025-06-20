@@ -56,4 +56,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'MapPinArea'
 
-export const MapPinArea: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const MapPinArea: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

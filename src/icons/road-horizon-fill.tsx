@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'RoadHorizonFill'
 
-export const RoadHorizonFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const RoadHorizonFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

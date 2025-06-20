@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'TelegramLogoFill'
 
-export const TelegramLogoFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const TelegramLogoFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

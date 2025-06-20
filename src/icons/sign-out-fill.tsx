@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'SignOutFill'
 
-export const SignOutFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const SignOutFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

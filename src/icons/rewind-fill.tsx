@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'RewindFill'
 
-export const RewindFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const RewindFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

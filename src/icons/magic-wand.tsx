@@ -129,4 +129,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'MagicWand'
 
-export const MagicWand: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const MagicWand: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

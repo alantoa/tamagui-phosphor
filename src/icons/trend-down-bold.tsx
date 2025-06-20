@@ -55,6 +55,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'TrendDownBold'
 
-export const TrendDownBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const TrendDownBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

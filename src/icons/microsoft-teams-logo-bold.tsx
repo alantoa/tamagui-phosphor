@@ -105,6 +105,5 @@ const Icon = (props) => {
 
 Icon.displayName = 'MicrosoftTeamsLogoBold'
 
-export const MicrosoftTeamsLogoBold: NamedExoticComponent<IconProps> = memo<IconProps>(
-  themed(Icon)
-)
+export const MicrosoftTeamsLogoBold: (propsIn: IconProps) => JSX.Element =
+  memo<IconProps>(themed(Icon))

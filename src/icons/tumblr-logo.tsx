@@ -47,4 +47,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'TumblrLogo'
 
-export const TumblrLogo: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const TumblrLogo: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

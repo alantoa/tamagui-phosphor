@@ -40,4 +40,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'GpsFill'
 
-export const GpsFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const GpsFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

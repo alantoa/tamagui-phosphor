@@ -63,6 +63,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ChartLineDown'
 
-export const ChartLineDown: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const ChartLineDown: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

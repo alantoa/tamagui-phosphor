@@ -70,6 +70,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'VoicemailBold'
 
-export const VoicemailBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const VoicemailBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

@@ -73,4 +73,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'DeviceMobile'
 
-export const DeviceMobile: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const DeviceMobile: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

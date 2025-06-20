@@ -80,4 +80,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'CloudFogBold'
 
-export const CloudFogBold: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const CloudFogBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

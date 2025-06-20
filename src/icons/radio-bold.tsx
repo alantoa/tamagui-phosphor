@@ -90,4 +90,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'RadioBold'
 
-export const RadioBold: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const RadioBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

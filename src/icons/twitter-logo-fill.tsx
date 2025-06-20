@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'TwitterLogoFill'
 
-export const TwitterLogoFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const TwitterLogoFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

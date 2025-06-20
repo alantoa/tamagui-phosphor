@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'CaretUpDownFill'
 
-export const CaretUpDownFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const CaretUpDownFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

@@ -47,6 +47,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'NavigationArrow'
 
-export const NavigationArrow: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const NavigationArrow: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

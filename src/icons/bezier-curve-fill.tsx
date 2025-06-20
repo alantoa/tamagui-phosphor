@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'BezierCurveFill'
 
-export const BezierCurveFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const BezierCurveFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

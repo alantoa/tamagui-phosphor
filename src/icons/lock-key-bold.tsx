@@ -80,4 +80,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'LockKeyBold'
 
-export const LockKeyBold: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const LockKeyBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

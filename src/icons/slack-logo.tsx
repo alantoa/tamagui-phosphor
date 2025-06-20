@@ -106,4 +106,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'SlackLogo'
 
-export const SlackLogo: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const SlackLogo: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'FileJpgFill'
 
-export const FileJpgFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const FileJpgFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

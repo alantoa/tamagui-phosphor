@@ -58,4 +58,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'SkipForward'
 
-export const SkipForward: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const SkipForward: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

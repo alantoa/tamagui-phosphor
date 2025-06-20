@@ -93,6 +93,5 @@ const Icon = (props) => {
 
 Icon.displayName = 'FolderSimpleDashedBold'
 
-export const FolderSimpleDashedBold: NamedExoticComponent<IconProps> = memo<IconProps>(
-  themed(Icon)
-)
+export const FolderSimpleDashedBold: (propsIn: IconProps) => JSX.Element =
+  memo<IconProps>(themed(Icon))

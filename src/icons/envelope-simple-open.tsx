@@ -55,6 +55,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'EnvelopeSimpleOpen'
 
-export const EnvelopeSimpleOpen: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const EnvelopeSimpleOpen: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

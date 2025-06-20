@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'NumberCircleSevenFill'
 
-export const NumberCircleSevenFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const NumberCircleSevenFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

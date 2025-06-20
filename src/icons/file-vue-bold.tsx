@@ -90,4 +90,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'FileVueBold'
 
-export const FileVueBold: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const FileVueBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

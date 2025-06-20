@@ -94,6 +94,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'LinktreeLogoBold'
 
-export const LinktreeLogoBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const LinktreeLogoBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

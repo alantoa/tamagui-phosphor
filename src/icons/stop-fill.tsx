@@ -40,4 +40,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'StopFill'
 
-export const StopFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const StopFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

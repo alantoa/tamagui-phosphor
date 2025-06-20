@@ -69,6 +69,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'GooglePlayLogoBold'
 
-export const GooglePlayLogoBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const GooglePlayLogoBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

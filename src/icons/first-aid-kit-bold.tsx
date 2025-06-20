@@ -81,6 +81,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'FirstAidKitBold'
 
-export const FirstAidKitBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const FirstAidKitBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

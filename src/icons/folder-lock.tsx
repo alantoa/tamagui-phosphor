@@ -74,4 +74,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'FolderLock'
 
-export const FolderLock: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const FolderLock: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

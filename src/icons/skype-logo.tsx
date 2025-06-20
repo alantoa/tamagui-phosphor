@@ -55,4 +55,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'SkypeLogo'
 
-export const SkypeLogo: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const SkypeLogo: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

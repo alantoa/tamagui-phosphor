@@ -55,6 +55,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'FlipVerticalBold'
 
-export const FlipVerticalBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const FlipVerticalBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

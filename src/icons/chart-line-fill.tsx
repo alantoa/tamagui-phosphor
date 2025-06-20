@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ChartLineFill'
 
-export const ChartLineFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const ChartLineFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

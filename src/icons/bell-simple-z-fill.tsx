@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'BellSimpleZFill'
 
-export const BellSimpleZFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const BellSimpleZFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

@@ -171,4 +171,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'Equalizer'
 
-export const Equalizer: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const Equalizer: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

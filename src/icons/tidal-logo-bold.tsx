@@ -87,6 +87,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'TidalLogoBold'
 
-export const TidalLogoBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const TidalLogoBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

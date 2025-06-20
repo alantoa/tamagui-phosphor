@@ -105,6 +105,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'FadersHorizontalBold'
 
-export const FadersHorizontalBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const FadersHorizontalBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

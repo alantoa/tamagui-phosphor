@@ -149,4 +149,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'GradientBold'
 
-export const GradientBold: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const GradientBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

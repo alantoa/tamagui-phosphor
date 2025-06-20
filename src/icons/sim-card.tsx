@@ -80,4 +80,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'SimCard'
 
-export const SimCard: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const SimCard: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

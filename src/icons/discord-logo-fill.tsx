@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'DiscordLogoFill'
 
-export const DiscordLogoFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const DiscordLogoFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

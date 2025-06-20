@@ -88,6 +88,5 @@ const Icon = (props) => {
 
 Icon.displayName = 'SpeakerSimpleSlashBold'
 
-export const SpeakerSimpleSlashBold: NamedExoticComponent<IconProps> = memo<IconProps>(
-  themed(Icon)
-)
+export const SpeakerSimpleSlashBold: (propsIn: IconProps) => JSX.Element =
+  memo<IconProps>(themed(Icon))

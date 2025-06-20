@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'CloudXFill'
 
-export const CloudXFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const CloudXFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

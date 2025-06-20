@@ -40,6 +40,5 @@ const Icon = (props) => {
 
 Icon.displayName = 'BatteryPlusVerticalFill'
 
-export const BatteryPlusVerticalFill: NamedExoticComponent<IconProps> = memo<IconProps>(
-  themed(Icon)
-)
+export const BatteryPlusVerticalFill: (propsIn: IconProps) => JSX.Element =
+  memo<IconProps>(themed(Icon))

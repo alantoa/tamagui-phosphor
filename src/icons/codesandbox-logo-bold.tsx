@@ -90,6 +90,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'CodesandboxLogoBold'
 
-export const CodesandboxLogoBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const CodesandboxLogoBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

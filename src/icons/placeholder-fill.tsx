@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'PlaceholderFill'
 
-export const PlaceholderFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const PlaceholderFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

@@ -47,4 +47,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'GoogleLogo'
 
-export const GoogleLogo: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const GoogleLogo: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

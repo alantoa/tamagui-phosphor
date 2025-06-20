@@ -91,4 +91,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'KanbanBold'
 
-export const KanbanBold: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const KanbanBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

@@ -57,6 +57,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'WechatLogoBold'
 
-export const WechatLogoBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const WechatLogoBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

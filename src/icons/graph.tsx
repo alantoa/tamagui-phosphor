@@ -133,4 +133,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'Graph'
 
-export const Graph: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const Graph: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

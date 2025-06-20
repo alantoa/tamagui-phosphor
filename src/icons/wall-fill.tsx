@@ -46,4 +46,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'WallFill'
 
-export const WallFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const WallFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'RepeatOnceFill'
 
-export const RepeatOnceFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const RepeatOnceFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

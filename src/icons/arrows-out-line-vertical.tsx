@@ -88,6 +88,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ArrowsOutLineVertical'
 
-export const ArrowsOutLineVertical: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const ArrowsOutLineVertical: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

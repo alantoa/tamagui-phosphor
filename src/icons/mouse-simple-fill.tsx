@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'MouseSimpleFill'
 
-export const MouseSimpleFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const MouseSimpleFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

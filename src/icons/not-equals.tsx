@@ -70,4 +70,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'NotEquals'
 
-export const NotEquals: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const NotEquals: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

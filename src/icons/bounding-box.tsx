@@ -131,4 +131,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'BoundingBox'
 
-export const BoundingBox: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const BoundingBox: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'UserFocusFill'
 
-export const UserFocusFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const UserFocusFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

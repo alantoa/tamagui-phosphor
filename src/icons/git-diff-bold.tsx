@@ -91,4 +91,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'GitDiffBold'
 
-export const GitDiffBold: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const GitDiffBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

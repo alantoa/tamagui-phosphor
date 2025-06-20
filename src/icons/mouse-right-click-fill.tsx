@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'MouseRightClickFill'
 
-export const MouseRightClickFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const MouseRightClickFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

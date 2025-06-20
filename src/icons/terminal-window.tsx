@@ -70,6 +70,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'TerminalWindow'
 
-export const TerminalWindow: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const TerminalWindow: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

@@ -70,4 +70,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'PauseCircle'
 
-export const PauseCircle: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const PauseCircle: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

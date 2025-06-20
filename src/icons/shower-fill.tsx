@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ShowerFill'
 
-export const ShowerFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const ShowerFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'NotSubsetOfFill'
 
-export const NotSubsetOfFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const NotSubsetOfFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

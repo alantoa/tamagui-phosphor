@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'CameraPlusFill'
 
-export const CameraPlusFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const CameraPlusFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

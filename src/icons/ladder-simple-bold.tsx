@@ -94,6 +94,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'LadderSimpleBold'
 
-export const LadderSimpleBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const LadderSimpleBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

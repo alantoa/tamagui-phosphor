@@ -69,4 +69,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'Backspace'
 
-export const Backspace: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const Backspace: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

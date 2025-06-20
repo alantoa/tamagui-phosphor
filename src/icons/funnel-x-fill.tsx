@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'FunnelXFill'
 
-export const FunnelXFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const FunnelXFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

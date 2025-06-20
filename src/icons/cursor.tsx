@@ -47,4 +47,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'Cursor'
 
-export const Cursor: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const Cursor: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

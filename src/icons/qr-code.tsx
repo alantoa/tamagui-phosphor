@@ -116,4 +116,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'QrCode'
 
-export const QrCode: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const QrCode: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

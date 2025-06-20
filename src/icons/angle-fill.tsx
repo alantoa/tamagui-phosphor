@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'AngleFill'
 
-export const AngleFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const AngleFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

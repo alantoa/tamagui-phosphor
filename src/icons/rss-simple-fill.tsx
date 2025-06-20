@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'RssSimpleFill'
 
-export const RssSimpleFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const RssSimpleFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

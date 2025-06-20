@@ -84,4 +84,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'SidebarBold'
 
-export const SidebarBold: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const SidebarBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

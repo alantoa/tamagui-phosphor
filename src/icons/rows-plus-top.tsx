@@ -85,4 +85,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'RowsPlusTop'
 
-export const RowsPlusTop: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const RowsPlusTop: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

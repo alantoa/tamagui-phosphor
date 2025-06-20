@@ -40,6 +40,5 @@ const Icon = (props) => {
 
 Icon.displayName = 'PaperclipHorizontalFill'
 
-export const PaperclipHorizontalFill: NamedExoticComponent<IconProps> = memo<IconProps>(
-  themed(Icon)
-)
+export const PaperclipHorizontalFill: (propsIn: IconProps) => JSX.Element =
+  memo<IconProps>(themed(Icon))

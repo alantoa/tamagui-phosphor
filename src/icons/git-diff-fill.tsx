@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'GitDiffFill'
 
-export const GitDiffFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const GitDiffFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

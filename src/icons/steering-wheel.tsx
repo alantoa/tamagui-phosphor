@@ -74,6 +74,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'SteeringWheel'
 
-export const SteeringWheel: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const SteeringWheel: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

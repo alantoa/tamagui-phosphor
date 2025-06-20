@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'WhatsappLogoFill'
 
-export const WhatsappLogoFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const WhatsappLogoFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

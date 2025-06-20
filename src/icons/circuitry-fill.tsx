@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'CircuitryFill'
 
-export const CircuitryFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const CircuitryFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

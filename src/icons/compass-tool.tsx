@@ -90,4 +90,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'CompassTool'
 
-export const CompassTool: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const CompassTool: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

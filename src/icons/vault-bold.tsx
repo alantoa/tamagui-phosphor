@@ -94,4 +94,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'VaultBold'
 
-export const VaultBold: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const VaultBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

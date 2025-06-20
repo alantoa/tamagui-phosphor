@@ -77,6 +77,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'NotionLogoBold'
 
-export const NotionLogoBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const NotionLogoBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

@@ -71,6 +71,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ScreencastBold'
 
-export const ScreencastBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const ScreencastBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

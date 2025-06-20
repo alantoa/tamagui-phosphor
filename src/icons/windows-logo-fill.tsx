@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'WindowsLogoFill'
 
-export const WindowsLogoFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const WindowsLogoFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

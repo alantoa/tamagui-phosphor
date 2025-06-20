@@ -44,4 +44,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'VibrateFill'
 
-export const VibrateFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const VibrateFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

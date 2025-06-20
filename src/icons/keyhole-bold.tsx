@@ -67,4 +67,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'KeyholeBold'
 
-export const KeyholeBold: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const KeyholeBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

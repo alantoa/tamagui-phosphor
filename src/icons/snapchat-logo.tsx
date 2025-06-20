@@ -69,4 +69,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'SnapchatLogo'
 
-export const SnapchatLogo: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const SnapchatLogo: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

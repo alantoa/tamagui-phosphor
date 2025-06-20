@@ -71,4 +71,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'CornersOut'
 
-export const CornersOut: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const CornersOut: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

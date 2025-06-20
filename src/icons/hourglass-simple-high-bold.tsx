@@ -66,6 +66,5 @@ const Icon = (props) => {
 
 Icon.displayName = 'HourglassSimpleHighBold'
 
-export const HourglassSimpleHighBold: NamedExoticComponent<IconProps> = memo<IconProps>(
-  themed(Icon)
-)
+export const HourglassSimpleHighBold: (propsIn: IconProps) => JSX.Element =
+  memo<IconProps>(themed(Icon))

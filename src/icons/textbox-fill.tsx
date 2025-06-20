@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'TextboxFill'
 
-export const TextboxFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const TextboxFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

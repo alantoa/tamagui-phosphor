@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'BehanceLogoFill'
 
-export const BehanceLogoFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const BehanceLogoFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ToggleLeftFill'
 
-export const ToggleLeftFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const ToggleLeftFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'PinwheelFill'
 
-export const PinwheelFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const PinwheelFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

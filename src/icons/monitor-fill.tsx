@@ -41,4 +41,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'MonitorFill'
 
-export const MonitorFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const MonitorFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

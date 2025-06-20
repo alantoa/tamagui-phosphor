@@ -94,4 +94,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'TreeView'
 
-export const TreeView: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const TreeView: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

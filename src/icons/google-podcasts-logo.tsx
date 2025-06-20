@@ -138,6 +138,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'GooglePodcastsLogo'
 
-export const GooglePodcastsLogo: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const GooglePodcastsLogo: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

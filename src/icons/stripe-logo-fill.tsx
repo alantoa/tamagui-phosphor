@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'StripeLogoFill'
 
-export const StripeLogoFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const StripeLogoFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

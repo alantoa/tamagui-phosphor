@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'SortAscendingFill'
 
-export const SortAscendingFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const SortAscendingFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'PhosphorLogoFill'
 
-export const PhosphorLogoFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const PhosphorLogoFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

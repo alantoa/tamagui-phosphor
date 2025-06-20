@@ -66,4 +66,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'WebhooksLogo'
 
-export const WebhooksLogo: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const WebhooksLogo: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

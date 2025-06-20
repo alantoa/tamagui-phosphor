@@ -85,4 +85,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ReadCvLogo'
 
-export const ReadCvLogo: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const ReadCvLogo: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

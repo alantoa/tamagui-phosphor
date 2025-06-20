@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'GooglePlayLogoFill'
 
-export const GooglePlayLogoFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const GooglePlayLogoFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

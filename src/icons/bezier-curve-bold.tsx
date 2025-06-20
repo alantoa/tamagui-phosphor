@@ -107,6 +107,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'BezierCurveBold'
 
-export const BezierCurveBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const BezierCurveBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

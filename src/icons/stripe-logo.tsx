@@ -59,4 +59,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'StripeLogo'
 
-export const StripeLogo: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const StripeLogo: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

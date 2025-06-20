@@ -69,6 +69,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'NotSupersetOfBold'
 
-export const NotSupersetOfBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const NotSupersetOfBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

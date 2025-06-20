@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'FileSvgFill'
 
-export const FileSvgFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const FileSvgFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

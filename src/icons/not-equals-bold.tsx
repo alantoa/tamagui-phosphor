@@ -72,6 +72,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'NotEqualsBold'
 
-export const NotEqualsBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const NotEqualsBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

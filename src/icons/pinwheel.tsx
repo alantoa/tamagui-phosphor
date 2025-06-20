@@ -82,4 +82,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'Pinwheel'
 
-export const Pinwheel: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const Pinwheel: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

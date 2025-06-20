@@ -40,4 +40,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'KeyFill'
 
-export const KeyFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const KeyFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

@@ -65,6 +65,5 @@ const Icon = (props) => {
 
 Icon.displayName = 'ContactlessPaymentBold'
 
-export const ContactlessPaymentBold: NamedExoticComponent<IconProps> = memo<IconProps>(
-  themed(Icon)
-)
+export const ContactlessPaymentBold: (propsIn: IconProps) => JSX.Element =
+  memo<IconProps>(themed(Icon))

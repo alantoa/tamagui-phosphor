@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'FalloutShelterFill'
 
-export const FalloutShelterFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const FalloutShelterFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

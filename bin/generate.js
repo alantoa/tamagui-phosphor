@@ -149,7 +149,7 @@ icons.forEach((i) => {
 
   Icon.displayName = '${cname}'
 
-  export const ${cname}: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+  export const ${cname}: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))
 `;
 
   fs.writeFileSync(location, out, 'utf-8');

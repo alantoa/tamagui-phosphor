@@ -47,4 +47,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'Paperclip'
 
-export const Paperclip: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const Paperclip: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

@@ -40,4 +40,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'DropFill'
 
-export const DropFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const DropFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

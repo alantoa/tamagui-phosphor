@@ -58,6 +58,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'PinterestLogoBold'
 
-export const PinterestLogoBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const PinterestLogoBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

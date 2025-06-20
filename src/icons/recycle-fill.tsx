@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'RecycleFill'
 
-export const RecycleFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const RecycleFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

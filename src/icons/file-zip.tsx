@@ -82,4 +82,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'FileZip'
 
-export const FileZip: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const FileZip: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

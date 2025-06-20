@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'MagnetStraightFill'
 
-export const MagnetStraightFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const MagnetStraightFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

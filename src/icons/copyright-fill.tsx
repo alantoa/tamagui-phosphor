@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'CopyrightFill'
 
-export const CopyrightFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const CopyrightFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

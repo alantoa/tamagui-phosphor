@@ -55,6 +55,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'PaypalLogoBold'
 
-export const PaypalLogoBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const PaypalLogoBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

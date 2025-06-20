@@ -40,4 +40,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'CakeFill'
 
-export const CakeFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const CakeFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

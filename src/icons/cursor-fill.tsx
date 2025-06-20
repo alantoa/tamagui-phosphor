@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'CursorFill'
 
-export const CursorFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const CursorFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

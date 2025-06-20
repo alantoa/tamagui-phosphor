@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'InfinityFill'
 
-export const InfinityFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const InfinityFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

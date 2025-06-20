@@ -42,6 +42,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'HeadCircuitFill'
 
-export const HeadCircuitFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const HeadCircuitFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

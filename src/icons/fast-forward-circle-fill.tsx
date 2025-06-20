@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'FastForwardCircleFill'
 
-export const FastForwardCircleFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const FastForwardCircleFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

@@ -58,4 +58,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'SupersetOf'
 
-export const SupersetOf: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const SupersetOf: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

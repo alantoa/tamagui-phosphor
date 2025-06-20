@@ -94,4 +94,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'Waveform'
 
-export const Waveform: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const Waveform: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

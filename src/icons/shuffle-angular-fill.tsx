@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ShuffleAngularFill'
 
-export const ShuffleAngularFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const ShuffleAngularFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

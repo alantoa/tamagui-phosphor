@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'SkypeLogoFill'
 
-export const SkypeLogoFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const SkypeLogoFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

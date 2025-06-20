@@ -97,6 +97,5 @@ const Icon = (props) => {
 
 Icon.displayName = 'SelectionBackgroundBold'
 
-export const SelectionBackgroundBold: NamedExoticComponent<IconProps> = memo<IconProps>(
-  themed(Icon)
-)
+export const SelectionBackgroundBold: (propsIn: IconProps) => JSX.Element =
+  memo<IconProps>(themed(Icon))

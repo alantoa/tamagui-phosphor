@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'SpadeFill'
 
-export const SpadeFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const SpadeFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

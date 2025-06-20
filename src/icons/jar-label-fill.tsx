@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'JarLabelFill'
 
-export const JarLabelFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const JarLabelFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

@@ -101,4 +101,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'Radio'
 
-export const Radio: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const Radio: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

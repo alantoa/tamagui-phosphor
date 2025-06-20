@@ -104,6 +104,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'CircleHalfTilt'
 
-export const CircleHalfTilt: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const CircleHalfTilt: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

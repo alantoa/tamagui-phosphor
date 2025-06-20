@@ -58,6 +58,5 @@ const Icon = (props) => {
 
 Icon.displayName = 'GreaterThanOrEqualBold'
 
-export const GreaterThanOrEqualBold: NamedExoticComponent<IconProps> = memo<IconProps>(
-  themed(Icon)
-)
+export const GreaterThanOrEqualBold: (propsIn: IconProps) => JSX.Element =
+  memo<IconProps>(themed(Icon))

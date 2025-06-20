@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'LessThanFill'
 
-export const LessThanFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const LessThanFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

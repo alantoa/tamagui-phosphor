@@ -116,6 +116,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'SpinnerGapBold'
 
-export const SpinnerGapBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const SpinnerGapBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

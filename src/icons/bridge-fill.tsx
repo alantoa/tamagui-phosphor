@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'BridgeFill'
 
-export const BridgeFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const BridgeFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

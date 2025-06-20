@@ -69,4 +69,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'TwitchLogo'
 
-export const TwitchLogo: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const TwitchLogo: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

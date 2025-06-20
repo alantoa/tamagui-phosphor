@@ -87,4 +87,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'OpenAiLogo'
 
-export const OpenAiLogo: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const OpenAiLogo: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

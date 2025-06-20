@@ -55,4 +55,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'Airplay'
 
-export const Airplay: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const Airplay: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

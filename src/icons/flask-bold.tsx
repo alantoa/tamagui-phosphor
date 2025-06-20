@@ -66,4 +66,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'FlaskBold'
 
-export const FlaskBold: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const FlaskBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

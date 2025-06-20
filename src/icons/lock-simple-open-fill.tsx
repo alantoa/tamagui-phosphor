@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'LockSimpleOpenFill'
 
-export const LockSimpleOpenFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const LockSimpleOpenFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

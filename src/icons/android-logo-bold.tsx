@@ -71,6 +71,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'AndroidLogoBold'
 
-export const AndroidLogoBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const AndroidLogoBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

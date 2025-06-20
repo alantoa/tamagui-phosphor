@@ -78,6 +78,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'MarkdownLogoBold'
 
-export const MarkdownLogoBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const MarkdownLogoBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

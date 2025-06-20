@@ -74,4 +74,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'VibrateBold'
 
-export const VibrateBold: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const VibrateBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

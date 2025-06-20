@@ -91,4 +91,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'CursorClick'
 
-export const CursorClick: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const CursorClick: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

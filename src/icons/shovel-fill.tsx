@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ShovelFill'
 
-export const ShovelFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const ShovelFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

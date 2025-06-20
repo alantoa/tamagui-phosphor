@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'GaugeFill'
 
-export const GaugeFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const GaugeFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

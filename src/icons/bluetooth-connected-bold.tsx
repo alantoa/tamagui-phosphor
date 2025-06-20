@@ -79,6 +79,5 @@ const Icon = (props) => {
 
 Icon.displayName = 'BluetoothConnectedBold'
 
-export const BluetoothConnectedBold: NamedExoticComponent<IconProps> = memo<IconProps>(
-  themed(Icon)
-)
+export const BluetoothConnectedBold: (propsIn: IconProps) => JSX.Element =
+  memo<IconProps>(themed(Icon))

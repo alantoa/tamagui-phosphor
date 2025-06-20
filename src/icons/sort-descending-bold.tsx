@@ -91,6 +91,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'SortDescendingBold'
 
-export const SortDescendingBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const SortDescendingBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

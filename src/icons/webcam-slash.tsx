@@ -104,4 +104,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'WebcamSlash'
 
-export const WebcamSlash: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const WebcamSlash: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

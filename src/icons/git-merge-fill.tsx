@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'GitMergeFill'
 
-export const GitMergeFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const GitMergeFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

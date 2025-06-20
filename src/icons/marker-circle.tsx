@@ -73,4 +73,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'MarkerCircle'
 
-export const MarkerCircle: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const MarkerCircle: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

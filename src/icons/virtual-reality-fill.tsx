@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'VirtualRealityFill'
 
-export const VirtualRealityFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const VirtualRealityFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

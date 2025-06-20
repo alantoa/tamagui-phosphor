@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'FlipHorizontalFill'
 
-export const FlipHorizontalFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const FlipHorizontalFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

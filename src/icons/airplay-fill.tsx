@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'AirplayFill'
 
-export const AirplayFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const AirplayFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

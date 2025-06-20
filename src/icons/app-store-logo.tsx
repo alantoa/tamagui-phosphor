@@ -105,4 +105,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'AppStoreLogo'
 
-export const AppStoreLogo: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const AppStoreLogo: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

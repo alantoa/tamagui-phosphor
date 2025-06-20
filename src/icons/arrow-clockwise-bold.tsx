@@ -55,6 +55,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ArrowClockwiseBold'
 
-export const ArrowClockwiseBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const ArrowClockwiseBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

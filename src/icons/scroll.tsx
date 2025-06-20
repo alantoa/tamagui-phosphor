@@ -77,4 +77,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'Scroll'
 
-export const Scroll: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const Scroll: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

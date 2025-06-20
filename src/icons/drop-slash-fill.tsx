@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'DropSlashFill'
 
-export const DropSlashFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const DropSlashFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

@@ -68,6 +68,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'SkipBackCircleBold'
 
-export const SkipBackCircleBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const SkipBackCircleBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

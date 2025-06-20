@@ -71,4 +71,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'Repeat'
 
-export const Repeat: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const Repeat: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

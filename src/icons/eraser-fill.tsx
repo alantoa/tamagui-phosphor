@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'EraserFill'
 
-export const EraserFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const EraserFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

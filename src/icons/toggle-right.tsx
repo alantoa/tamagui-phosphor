@@ -61,4 +61,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ToggleRight'
 
-export const ToggleRight: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const ToggleRight: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

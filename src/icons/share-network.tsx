@@ -91,4 +91,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ShareNetwork'
 
-export const ShareNetwork: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const ShareNetwork: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

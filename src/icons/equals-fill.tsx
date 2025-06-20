@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'EqualsFill'
 
-export const EqualsFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const EqualsFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

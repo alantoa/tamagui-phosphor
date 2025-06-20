@@ -47,4 +47,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ScribbleLoop'
 
-export const ScribbleLoop: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const ScribbleLoop: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

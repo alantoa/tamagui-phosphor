@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'FlaskFill'
 
-export const FlaskFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const FlaskFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

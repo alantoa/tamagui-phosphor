@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'AngularLogoFill'
 
-export const AngularLogoFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const AngularLogoFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

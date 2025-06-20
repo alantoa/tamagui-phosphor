@@ -65,6 +65,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'LinuxLogoBold'
 
-export const LinuxLogoBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const LinuxLogoBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

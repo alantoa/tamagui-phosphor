@@ -40,4 +40,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'EarFill'
 
-export const EarFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const EarFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

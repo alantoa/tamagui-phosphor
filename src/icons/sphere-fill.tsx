@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'SphereFill'
 
-export const SphereFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const SphereFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

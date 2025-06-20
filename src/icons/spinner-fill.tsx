@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'SpinnerFill'
 
-export const SpinnerFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const SpinnerFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'QueueFill'
 
-export const QueueFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const QueueFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

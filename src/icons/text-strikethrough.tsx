@@ -66,6 +66,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'TextStrikethrough'
 
-export const TextStrikethrough: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const TextStrikethrough: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

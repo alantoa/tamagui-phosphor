@@ -55,6 +55,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'LinkSimpleBreakBold'
 
-export const LinkSimpleBreakBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const LinkSimpleBreakBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

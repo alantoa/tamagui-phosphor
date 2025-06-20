@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'WechatLogoFill'
 
-export const WechatLogoFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const WechatLogoFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

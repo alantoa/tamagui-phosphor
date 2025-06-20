@@ -102,6 +102,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'HighDefinition'
 
-export const HighDefinition: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const HighDefinition: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

@@ -40,4 +40,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'TrayFill'
 
-export const TrayFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const TrayFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

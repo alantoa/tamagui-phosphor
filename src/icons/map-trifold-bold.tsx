@@ -69,6 +69,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'MapTrifoldBold'
 
-export const MapTrifoldBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const MapTrifoldBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

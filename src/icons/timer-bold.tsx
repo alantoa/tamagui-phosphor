@@ -71,4 +71,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'TimerBold'
 
-export const TimerBold: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const TimerBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

@@ -55,6 +55,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'YoutubeLogoBold'
 
-export const YoutubeLogoBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const YoutubeLogoBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

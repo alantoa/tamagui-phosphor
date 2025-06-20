@@ -70,4 +70,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'LineSegment'
 
-export const LineSegment: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const LineSegment: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

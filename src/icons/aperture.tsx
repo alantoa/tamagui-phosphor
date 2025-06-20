@@ -115,4 +115,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'Aperture'
 
-export const Aperture: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const Aperture: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

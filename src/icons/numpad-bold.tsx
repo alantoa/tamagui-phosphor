@@ -49,4 +49,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'NumpadBold'
 
-export const NumpadBold: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const NumpadBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

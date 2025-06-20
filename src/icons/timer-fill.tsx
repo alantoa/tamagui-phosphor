@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'TimerFill'
 
-export const TimerFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const TimerFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

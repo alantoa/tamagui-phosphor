@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ClipboardFill'
 
-export const ClipboardFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const ClipboardFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

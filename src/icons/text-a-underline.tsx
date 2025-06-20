@@ -69,6 +69,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'TextAUnderline'
 
-export const TextAUnderline: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const TextAUnderline: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

@@ -95,4 +95,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'GridNineBold'
 
-export const GridNineBold: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const GridNineBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

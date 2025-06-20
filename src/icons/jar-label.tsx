@@ -103,4 +103,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'JarLabel'
 
-export const JarLabel: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const JarLabel: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

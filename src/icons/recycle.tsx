@@ -87,4 +87,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'Recycle'
 
-export const Recycle: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const Recycle: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

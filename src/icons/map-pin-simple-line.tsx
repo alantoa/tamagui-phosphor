@@ -70,6 +70,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'MapPinSimpleLine'
 
-export const MapPinSimpleLine: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const MapPinSimpleLine: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

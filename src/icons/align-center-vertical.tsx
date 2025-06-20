@@ -97,6 +97,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'AlignCenterVertical'
 
-export const AlignCenterVertical: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const AlignCenterVertical: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

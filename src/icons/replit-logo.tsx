@@ -47,4 +47,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ReplitLogo'
 
-export const ReplitLogo: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const ReplitLogo: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

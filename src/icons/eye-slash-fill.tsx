@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'EyeSlashFill'
 
-export const EyeSlashFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const EyeSlashFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

@@ -40,6 +40,5 @@ const Icon = (props) => {
 
 Icon.displayName = 'DeviceTabletSpeakerFill'
 
-export const DeviceTabletSpeakerFill: NamedExoticComponent<IconProps> = memo<IconProps>(
-  themed(Icon)
-)
+export const DeviceTabletSpeakerFill: (propsIn: IconProps) => JSX.Element =
+  memo<IconProps>(themed(Icon))

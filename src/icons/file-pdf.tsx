@@ -90,4 +90,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'FilePdf'
 
-export const FilePdf: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const FilePdf: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

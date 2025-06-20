@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'FilmSlateFill'
 
-export const FilmSlateFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const FilmSlateFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'AlignLeftFill'
 
-export const AlignLeftFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const AlignLeftFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ClosedCaptioningFill'
 
-export const ClosedCaptioningFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const ClosedCaptioningFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

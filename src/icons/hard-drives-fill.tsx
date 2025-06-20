@@ -41,6 +41,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'HardDrivesFill'
 
-export const HardDrivesFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const HardDrivesFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

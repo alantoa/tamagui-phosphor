@@ -137,4 +137,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'SunDim'
 
-export const SunDim: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const SunDim: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

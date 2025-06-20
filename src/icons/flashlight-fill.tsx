@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'FlashlightFill'
 
-export const FlashlightFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const FlashlightFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

@@ -47,6 +47,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'TwitterLogoBold'
 
-export const TwitterLogoBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const TwitterLogoBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

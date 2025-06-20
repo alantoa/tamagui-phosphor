@@ -80,6 +80,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'GoogleDriveLogoBold'
 
-export const GoogleDriveLogoBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const GoogleDriveLogoBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

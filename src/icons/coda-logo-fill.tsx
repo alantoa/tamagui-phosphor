@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'CodaLogoFill'
 
-export const CodaLogoFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const CodaLogoFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

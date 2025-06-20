@@ -77,4 +77,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ScrollBold'
 
-export const ScrollBold: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const ScrollBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

@@ -77,4 +77,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'GitMergeBold'
 
-export const GitMergeBold: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const GitMergeBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

@@ -63,6 +63,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'BookBookmarkBold'
 
-export const BookBookmarkBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const BookBookmarkBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

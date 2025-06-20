@@ -123,4 +123,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'PolygonBold'
 
-export const PolygonBold: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const PolygonBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

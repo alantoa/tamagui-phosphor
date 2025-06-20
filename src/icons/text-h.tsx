@@ -72,4 +72,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'TextH'
 
-export const TextH: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const TextH: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

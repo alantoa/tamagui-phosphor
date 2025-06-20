@@ -77,6 +77,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'BookOpenTextBold'
 
-export const BookOpenTextBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const BookOpenTextBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

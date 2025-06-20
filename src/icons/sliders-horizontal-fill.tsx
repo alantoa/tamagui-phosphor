@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'SlidersHorizontalFill'
 
-export const SlidersHorizontalFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const SlidersHorizontalFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

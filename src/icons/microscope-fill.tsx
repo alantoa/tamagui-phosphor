@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'MicroscopeFill'
 
-export const MicroscopeFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const MicroscopeFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

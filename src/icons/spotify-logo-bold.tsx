@@ -65,6 +65,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'SpotifyLogoBold'
 
-export const SpotifyLogoBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const SpotifyLogoBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

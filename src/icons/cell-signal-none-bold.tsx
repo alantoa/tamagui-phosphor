@@ -50,6 +50,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'CellSignalNoneBold'
 
-export const CellSignalNoneBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const CellSignalNoneBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

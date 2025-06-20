@@ -78,6 +78,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'MouseScrollBold'
 
-export const MouseScrollBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const MouseScrollBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

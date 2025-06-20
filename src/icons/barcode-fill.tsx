@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'BarcodeFill'
 
-export const BarcodeFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const BarcodeFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

@@ -105,4 +105,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ListDashes'
 
-export const ListDashes: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const ListDashes: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

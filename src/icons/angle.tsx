@@ -66,4 +66,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'Angle'
 
-export const Angle: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const Angle: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

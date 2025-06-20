@@ -60,6 +60,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'MagnifyingGlass'
 
-export const MagnifyingGlass: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const MagnifyingGlass: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

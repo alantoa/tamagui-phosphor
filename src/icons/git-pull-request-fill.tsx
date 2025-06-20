@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'GitPullRequestFill'
 
-export const GitPullRequestFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const GitPullRequestFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'RainbowCloudFill'
 
-export const RainbowCloudFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const RainbowCloudFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

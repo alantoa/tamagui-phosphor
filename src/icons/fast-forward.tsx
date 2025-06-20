@@ -55,4 +55,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'FastForward'
 
-export const FastForward: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const FastForward: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

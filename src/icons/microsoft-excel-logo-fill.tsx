@@ -40,6 +40,5 @@ const Icon = (props) => {
 
 Icon.displayName = 'MicrosoftExcelLogoFill'
 
-export const MicrosoftExcelLogoFill: NamedExoticComponent<IconProps> = memo<IconProps>(
-  themed(Icon)
-)
+export const MicrosoftExcelLogoFill: (propsIn: IconProps) => JSX.Element =
+  memo<IconProps>(themed(Icon))

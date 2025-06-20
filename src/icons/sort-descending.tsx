@@ -88,6 +88,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'SortDescending'
 
-export const SortDescending: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const SortDescending: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

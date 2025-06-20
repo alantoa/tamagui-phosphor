@@ -63,6 +63,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ClockCounterClockwise'
 
-export const ClockCounterClockwise: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const ClockCounterClockwise: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

@@ -82,4 +82,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'FilePyBold'
 
-export const FilePyBold: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const FilePyBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

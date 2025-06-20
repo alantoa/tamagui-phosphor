@@ -74,4 +74,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'CakeBold'
 
-export const CakeBold: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const CakeBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

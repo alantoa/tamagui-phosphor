@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'GradientFill'
 
-export const GradientFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const GradientFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

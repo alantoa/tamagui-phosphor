@@ -88,4 +88,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'GitFork'
 
-export const GitFork: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const GitFork: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

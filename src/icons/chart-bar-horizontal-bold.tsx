@@ -74,6 +74,5 @@ const Icon = (props) => {
 
 Icon.displayName = 'ChartBarHorizontalBold'
 
-export const ChartBarHorizontalBold: NamedExoticComponent<IconProps> = memo<IconProps>(
-  themed(Icon)
-)
+export const ChartBarHorizontalBold: (propsIn: IconProps) => JSX.Element =
+  memo<IconProps>(themed(Icon))

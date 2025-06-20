@@ -71,4 +71,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ChartPieBold'
 
-export const ChartPieBold: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const ChartPieBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

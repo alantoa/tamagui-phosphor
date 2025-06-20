@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'ProhibitFill'
 
-export const ProhibitFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const ProhibitFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

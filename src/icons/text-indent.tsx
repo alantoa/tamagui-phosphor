@@ -80,4 +80,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'TextIndent'
 
-export const TextIndent: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const TextIndent: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

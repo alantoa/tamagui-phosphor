@@ -40,4 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'PanoramaFill'
 
-export const PanoramaFill: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const PanoramaFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
+  themed(Icon)
+)

@@ -40,6 +40,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'SplitHorizontalFill'
 
-export const SplitHorizontalFill: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const SplitHorizontalFill: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

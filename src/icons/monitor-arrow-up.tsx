@@ -82,6 +82,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'MonitorArrowUp'
 
-export const MonitorArrowUp: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const MonitorArrowUp: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

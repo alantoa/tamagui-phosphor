@@ -88,6 +88,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'SelectionInverseBold'
 
-export const SelectionInverseBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const SelectionInverseBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

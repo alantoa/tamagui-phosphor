@@ -125,4 +125,4 @@ const Icon = (props) => {
 
 Icon.displayName = 'Exclude'
 
-export const Exclude: NamedExoticComponent<IconProps> = memo<IconProps>(themed(Icon))
+export const Exclude: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))

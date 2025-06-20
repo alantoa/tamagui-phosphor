@@ -79,6 +79,6 @@ const Icon = (props) => {
 
 Icon.displayName = 'CameraRotateBold'
 
-export const CameraRotateBold: NamedExoticComponent<IconProps> = memo<IconProps>(
+export const CameraRotateBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
   themed(Icon)
 )

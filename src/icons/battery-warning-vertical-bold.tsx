@@ -74,5 +74,5 @@ const Icon = (props) => {
 
 Icon.displayName = 'BatteryWarningVerticalBold'
 
-export const BatteryWarningVerticalBold: NamedExoticComponent<IconProps> =
+export const BatteryWarningVerticalBold: (propsIn: IconProps) => JSX.Element =
   memo<IconProps>(themed(Icon))
