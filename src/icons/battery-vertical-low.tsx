@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import type { NamedExoticComponent } from 'react'
@@ -22,57 +23,55 @@ import {
 } from 'react-native-svg'
 import { themed } from '@tamagui/helpers-icon'
 
-const Icon = (props) => {
-  const { color = 'black', size = 24, ...otherProps } = props
-  return (
-    <Svg
-      viewBox="0 0 256 256"
-      width={size}
-      height={size}
-      fill="currentColor"
-      {...otherProps}
-    >
-      <SvgRect width="256" height="256" fill="none" />
-      <Line
-        x1="96"
-        y1="8"
-        x2="160"
-        y2="8"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="16"
-      />
-      <SvgRect
-        x="64"
-        y="40"
-        width="128"
-        height="200"
-        rx="16"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="16"
-      />
-      <Line
-        x1="96"
-        y1="200"
-        x2="160"
-        y2="200"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="16"
-      />
-    </Svg>
-  )
-}
+type IconComponent = (propsIn: IconProps) => JSX.Element
 
-Icon.displayName = 'BatteryVerticalLow'
-
-export const BatteryVerticalLow: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
-  themed(Icon)
+export const BatteryVerticalLow: IconComponent = themed(
+  memo(function BatteryVerticalLow(props: IconProps) {
+    const { color = 'black', size = 24, ...otherProps } = props
+    return (
+      <Svg
+        viewBox="0 0 256 256"
+        width={size}
+        height={size}
+        fill="currentColor"
+        {...otherProps}
+      >
+        <SvgRect width="256" height="256" fill="none" />
+        <Line
+          x1="96"
+          y1="8"
+          x2="160"
+          y2="8"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="16"
+        />
+        <SvgRect
+          x="64"
+          y="40"
+          width="128"
+          height="200"
+          rx="16"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="16"
+        />
+        <Line
+          x1="96"
+          y1="200"
+          x2="160"
+          y2="200"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="16"
+        />
+      </Svg>
+    )
+  })
 )

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import type { NamedExoticComponent } from 'react'
@@ -22,46 +23,45 @@ import {
 } from 'react-native-svg'
 import { themed } from '@tamagui/helpers-icon'
 
-const Icon = (props) => {
-  const { color = 'black', size = 24, ...otherProps } = props
-  return (
-    <Svg
-      viewBox="0 0 256 256"
-      width={size}
-      height={size}
-      fill="currentColor"
-      {...otherProps}
-    >
-      <SvgRect width="256" height="256" fill="none" />
-      <SvgPolyline
-        points="80 152 32 104 80 56"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="24"
-      />
-      <SvgPolyline
-        points="136 152 88 104 136 56"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="24"
-      />
-      <SvgPath
-        d="M224,200a96,96,0,0,0-96-96H88"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="24"
-      />
-    </Svg>
-  )
-}
+type IconComponent = (propsIn: IconProps) => JSX.Element
 
-Icon.displayName = 'ArrowBendDoubleUpLeftBold'
-
-export const ArrowBendDoubleUpLeftBold: (propsIn: IconProps) => JSX.Element =
-  memo<IconProps>(themed(Icon))
+export const ArrowBendDoubleUpLeftBold: IconComponent = themed(
+  memo(function ArrowBendDoubleUpLeftBold(props: IconProps) {
+    const { color = 'black', size = 24, ...otherProps } = props
+    return (
+      <Svg
+        viewBox="0 0 256 256"
+        width={size}
+        height={size}
+        fill="currentColor"
+        {...otherProps}
+      >
+        <SvgRect width="256" height="256" fill="none" />
+        <SvgPolyline
+          points="80 152 32 104 80 56"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="24"
+        />
+        <SvgPolyline
+          points="136 152 88 104 136 56"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="24"
+        />
+        <SvgPath
+          d="M224,200a96,96,0,0,0-96-96H88"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="24"
+        />
+      </Svg>
+    )
+  })
+)

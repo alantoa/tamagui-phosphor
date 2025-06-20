@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import type { NamedExoticComponent } from 'react'
@@ -22,31 +23,31 @@ import {
 } from 'react-native-svg'
 import { themed } from '@tamagui/helpers-icon'
 
-const Icon = (props) => {
-  const { color = 'black', size = 24, ...otherProps } = props
-  return (
-    <Svg
-      viewBox="0 0 256 256"
-      width={size}
-      height={size}
-      fill="currentColor"
-      {...otherProps}
-    >
-      <SvgRect width="256" height="256" fill="none" />
-      <_Circle cx="64" cy="48" r="16" />
-      <_Circle cx="128" cy="48" r="16" />
-      <_Circle cx="192" cy="48" r="16" />
-      <_Circle cx="64" cy="104" r="16" />
-      <_Circle cx="128" cy="104" r="16" />
-      <_Circle cx="192" cy="104" r="16" />
-      <_Circle cx="64" cy="160" r="16" />
-      <_Circle cx="128" cy="160" r="16" />
-      <_Circle cx="128" cy="216" r="16" />
-      <_Circle cx="192" cy="160" r="16" />
-    </Svg>
-  )
-}
+type IconComponent = (propsIn: IconProps) => JSX.Element
 
-Icon.displayName = 'Numpad'
-
-export const Numpad: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))
+export const Numpad: IconComponent = themed(
+  memo(function Numpad(props: IconProps) {
+    const { color = 'black', size = 24, ...otherProps } = props
+    return (
+      <Svg
+        viewBox="0 0 256 256"
+        width={size}
+        height={size}
+        fill="currentColor"
+        {...otherProps}
+      >
+        <SvgRect width="256" height="256" fill="none" />
+        <_Circle cx="64" cy="48" r="16" />
+        <_Circle cx="128" cy="48" r="16" />
+        <_Circle cx="192" cy="48" r="16" />
+        <_Circle cx="64" cy="104" r="16" />
+        <_Circle cx="128" cy="104" r="16" />
+        <_Circle cx="192" cy="104" r="16" />
+        <_Circle cx="64" cy="160" r="16" />
+        <_Circle cx="128" cy="160" r="16" />
+        <_Circle cx="128" cy="216" r="16" />
+        <_Circle cx="192" cy="160" r="16" />
+      </Svg>
+    )
+  })
+)

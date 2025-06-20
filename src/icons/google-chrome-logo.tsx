@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import type { NamedExoticComponent } from 'react'
@@ -22,76 +23,74 @@ import {
 } from 'react-native-svg'
 import { themed } from '@tamagui/helpers-icon'
 
-const Icon = (props) => {
-  const { color = 'black', size = 24, ...otherProps } = props
-  return (
-    <Svg
-      viewBox="0 0 256 256"
-      width={size}
-      height={size}
-      fill="currentColor"
-      {...otherProps}
-    >
-      <SvgRect width="256" height="256" fill="none" />
-      <_Circle
-        cx="128"
-        cy="128"
-        r="96"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="16"
-      />
-      <_Circle
-        cx="128"
-        cy="128"
-        r="40"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="16"
-      />
-      <Line
-        x1="128"
-        y1="88"
-        x2="215.29"
-        y2="88"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="16"
-      />
-      <Line
-        x1="162.64"
-        y1="148"
-        x2="118.99"
-        y2="223.6"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="16"
-      />
-      <Line
-        x1="93.36"
-        y1="148"
-        x2="49.71"
-        y2="72.4"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="16"
-      />
-    </Svg>
-  )
-}
+type IconComponent = (propsIn: IconProps) => JSX.Element
 
-Icon.displayName = 'GoogleChromeLogo'
-
-export const GoogleChromeLogo: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
-  themed(Icon)
+export const GoogleChromeLogo: IconComponent = themed(
+  memo(function GoogleChromeLogo(props: IconProps) {
+    const { color = 'black', size = 24, ...otherProps } = props
+    return (
+      <Svg
+        viewBox="0 0 256 256"
+        width={size}
+        height={size}
+        fill="currentColor"
+        {...otherProps}
+      >
+        <SvgRect width="256" height="256" fill="none" />
+        <_Circle
+          cx="128"
+          cy="128"
+          r="96"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="16"
+        />
+        <_Circle
+          cx="128"
+          cy="128"
+          r="40"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="16"
+        />
+        <Line
+          x1="128"
+          y1="88"
+          x2="215.29"
+          y2="88"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="16"
+        />
+        <Line
+          x1="162.64"
+          y1="148"
+          x2="118.99"
+          y2="223.6"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="16"
+        />
+        <Line
+          x1="93.36"
+          y1="148"
+          x2="49.71"
+          y2="72.4"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="16"
+        />
+      </Svg>
+    )
+  })
 )

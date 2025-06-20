@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import type { NamedExoticComponent } from 'react'
@@ -22,42 +23,40 @@ import {
 } from 'react-native-svg'
 import { themed } from '@tamagui/helpers-icon'
 
-const Icon = (props) => {
-  const { color = 'black', size = 24, ...otherProps } = props
-  return (
-    <Svg
-      viewBox="0 0 256 256"
-      width={size}
-      height={size}
-      fill="currentColor"
-      {...otherProps}
-    >
-      <SvgRect width="256" height="256" fill="none" />
-      <Line
-        x1="104"
-        y1="216"
-        x2="248"
-        y2="216"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="16"
-      />
-      <SvgPath
-        d="M60,75.46,104,88V48a8,8,0,0,1,10.53-7.59L120,42.24l24,57.2,64.56,18A32,32,0,0,1,232,148.32V184L55.37,134.54A32,32,0,0,1,32,103.73V48a8,8,0,0,1,10.53-7.59L48,42.24Z"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="16"
-      />
-    </Svg>
-  )
-}
+type IconComponent = (propsIn: IconProps) => JSX.Element
 
-Icon.displayName = 'AirplaneLanding'
-
-export const AirplaneLanding: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
-  themed(Icon)
+export const AirplaneLanding: IconComponent = themed(
+  memo(function AirplaneLanding(props: IconProps) {
+    const { color = 'black', size = 24, ...otherProps } = props
+    return (
+      <Svg
+        viewBox="0 0 256 256"
+        width={size}
+        height={size}
+        fill="currentColor"
+        {...otherProps}
+      >
+        <SvgRect width="256" height="256" fill="none" />
+        <Line
+          x1="104"
+          y1="216"
+          x2="248"
+          y2="216"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="16"
+        />
+        <SvgPath
+          d="M60,75.46,104,88V48a8,8,0,0,1,10.53-7.59L120,42.24l24,57.2,64.56,18A32,32,0,0,1,232,148.32V184L55.37,134.54A32,32,0,0,1,32,103.73V48a8,8,0,0,1,10.53-7.59L48,42.24Z"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="16"
+        />
+      </Svg>
+    )
+  })
 )

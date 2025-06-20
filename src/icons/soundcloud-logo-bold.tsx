@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import type { NamedExoticComponent } from 'react'
@@ -22,64 +23,62 @@ import {
 } from 'react-native-svg'
 import { themed } from '@tamagui/helpers-icon'
 
-const Icon = (props) => {
-  const { color = 'black', size = 24, ...otherProps } = props
-  return (
-    <Svg
-      viewBox="0 0 256 256"
-      width={size}
-      height={size}
-      fill="currentColor"
-      {...otherProps}
-    >
-      <SvgRect width="256" height="256" fill="none" />
-      <Line
-        x1="20"
-        y1="120"
-        x2="20"
-        y2="168"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="24"
-      />
-      <Line
-        x1="60"
-        y1="96"
-        x2="60"
-        y2="192"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="24"
-      />
-      <Line
-        x1="100"
-        y1="56"
-        x2="100"
-        y2="192"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="24"
-      />
-      <SvgPath
-        d="M140,192h64a40,40,0,0,0,7.64-79.27A72,72,0,0,0,140,48"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="24"
-      />
-    </Svg>
-  )
-}
+type IconComponent = (propsIn: IconProps) => JSX.Element
 
-Icon.displayName = 'SoundcloudLogoBold'
-
-export const SoundcloudLogoBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
-  themed(Icon)
+export const SoundcloudLogoBold: IconComponent = themed(
+  memo(function SoundcloudLogoBold(props: IconProps) {
+    const { color = 'black', size = 24, ...otherProps } = props
+    return (
+      <Svg
+        viewBox="0 0 256 256"
+        width={size}
+        height={size}
+        fill="currentColor"
+        {...otherProps}
+      >
+        <SvgRect width="256" height="256" fill="none" />
+        <Line
+          x1="20"
+          y1="120"
+          x2="20"
+          y2="168"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="24"
+        />
+        <Line
+          x1="60"
+          y1="96"
+          x2="60"
+          y2="192"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="24"
+        />
+        <Line
+          x1="100"
+          y1="56"
+          x2="100"
+          y2="192"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="24"
+        />
+        <SvgPath
+          d="M140,192h64a40,40,0,0,0,7.64-79.27A72,72,0,0,0,140,48"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="24"
+        />
+      </Svg>
+    )
+  })
 )

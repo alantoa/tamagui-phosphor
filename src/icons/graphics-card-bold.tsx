@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import type { NamedExoticComponent } from 'react'
@@ -22,84 +23,82 @@ import {
 } from 'react-native-svg'
 import { themed } from '@tamagui/helpers-icon'
 
-const Icon = (props) => {
-  const { color = 'black', size = 24, ...otherProps } = props
-  return (
-    <Svg
-      viewBox="0 0 256 256"
-      width={size}
-      height={size}
-      fill="currentColor"
-      {...otherProps}
-    >
-      <SvgRect width="256" height="256" fill="none" />
-      <SvgPath
-        d="M16,184H232a8,8,0,0,0,8-8V64a8,8,0,0,0-8-8H16V208"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="24"
-      />
-      <_Circle
-        cx="176"
-        cy="120"
-        r="28"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="24"
-      />
-      <Line
-        x1="96"
-        y1="208"
-        x2="96"
-        y2="184"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="24"
-      />
-      <Line
-        x1="56"
-        y1="184"
-        x2="56"
-        y2="208"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="24"
-      />
-      <Line
-        x1="136"
-        y1="208"
-        x2="136"
-        y2="184"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="24"
-      />
-      <_Circle
-        cx="80"
-        cy="120"
-        r="28"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="24"
-      />
-    </Svg>
-  )
-}
+type IconComponent = (propsIn: IconProps) => JSX.Element
 
-Icon.displayName = 'GraphicsCardBold'
-
-export const GraphicsCardBold: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
-  themed(Icon)
+export const GraphicsCardBold: IconComponent = themed(
+  memo(function GraphicsCardBold(props: IconProps) {
+    const { color = 'black', size = 24, ...otherProps } = props
+    return (
+      <Svg
+        viewBox="0 0 256 256"
+        width={size}
+        height={size}
+        fill="currentColor"
+        {...otherProps}
+      >
+        <SvgRect width="256" height="256" fill="none" />
+        <SvgPath
+          d="M16,184H232a8,8,0,0,0,8-8V64a8,8,0,0,0-8-8H16V208"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="24"
+        />
+        <_Circle
+          cx="176"
+          cy="120"
+          r="28"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="24"
+        />
+        <Line
+          x1="96"
+          y1="208"
+          x2="96"
+          y2="184"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="24"
+        />
+        <Line
+          x1="56"
+          y1="184"
+          x2="56"
+          y2="208"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="24"
+        />
+        <Line
+          x1="136"
+          y1="208"
+          x2="136"
+          y2="184"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="24"
+        />
+        <_Circle
+          cx="80"
+          cy="120"
+          r="28"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="24"
+        />
+      </Svg>
+    )
+  })
 )

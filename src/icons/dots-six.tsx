@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import type { NamedExoticComponent } from 'react'
@@ -22,27 +23,27 @@ import {
 } from 'react-native-svg'
 import { themed } from '@tamagui/helpers-icon'
 
-const Icon = (props) => {
-  const { color = 'black', size = 24, ...otherProps } = props
-  return (
-    <Svg
-      viewBox="0 0 256 256"
-      width={size}
-      height={size}
-      fill="currentColor"
-      {...otherProps}
-    >
-      <SvgRect width="256" height="256" fill="none" />
-      <_Circle cx="60" cy="92" r="12" />
-      <_Circle cx="128" cy="92" r="12" />
-      <_Circle cx="196" cy="92" r="12" />
-      <_Circle cx="60" cy="164" r="12" />
-      <_Circle cx="128" cy="164" r="12" />
-      <_Circle cx="196" cy="164" r="12" />
-    </Svg>
-  )
-}
+type IconComponent = (propsIn: IconProps) => JSX.Element
 
-Icon.displayName = 'DotsSix'
-
-export const DotsSix: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))
+export const DotsSix: IconComponent = themed(
+  memo(function DotsSix(props: IconProps) {
+    const { color = 'black', size = 24, ...otherProps } = props
+    return (
+      <Svg
+        viewBox="0 0 256 256"
+        width={size}
+        height={size}
+        fill="currentColor"
+        {...otherProps}
+      >
+        <SvgRect width="256" height="256" fill="none" />
+        <_Circle cx="60" cy="92" r="12" />
+        <_Circle cx="128" cy="92" r="12" />
+        <_Circle cx="196" cy="92" r="12" />
+        <_Circle cx="60" cy="164" r="12" />
+        <_Circle cx="128" cy="164" r="12" />
+        <_Circle cx="196" cy="164" r="12" />
+      </Svg>
+    )
+  })
+)

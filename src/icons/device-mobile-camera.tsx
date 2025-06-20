@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import type { NamedExoticComponent } from 'react'
@@ -22,37 +23,35 @@ import {
 } from 'react-native-svg'
 import { themed } from '@tamagui/helpers-icon'
 
-const Icon = (props) => {
-  const { color = 'black', size = 24, ...otherProps } = props
-  return (
-    <Svg
-      viewBox="0 0 256 256"
-      width={size}
-      height={size}
-      fill="currentColor"
-      {...otherProps}
-    >
-      <SvgRect width="256" height="256" fill="none" />
-      <SvgRect
-        x="24"
-        y="64"
-        width="208"
-        height="128"
-        rx="16"
-        transform="translate(256) rotate(90)"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="16"
-      />
-      <_Circle cx="128" cy="60" r="12" />
-    </Svg>
-  )
-}
+type IconComponent = (propsIn: IconProps) => JSX.Element
 
-Icon.displayName = 'DeviceMobileCamera'
-
-export const DeviceMobileCamera: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
-  themed(Icon)
+export const DeviceMobileCamera: IconComponent = themed(
+  memo(function DeviceMobileCamera(props: IconProps) {
+    const { color = 'black', size = 24, ...otherProps } = props
+    return (
+      <Svg
+        viewBox="0 0 256 256"
+        width={size}
+        height={size}
+        fill="currentColor"
+        {...otherProps}
+      >
+        <SvgRect width="256" height="256" fill="none" />
+        <SvgRect
+          x="24"
+          y="64"
+          width="208"
+          height="128"
+          rx="16"
+          transform="translate(256) rotate(90)"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="16"
+        />
+        <_Circle cx="128" cy="60" r="12" />
+      </Svg>
+    )
+  })
 )

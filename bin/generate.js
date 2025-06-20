@@ -73,84 +73,52 @@ icons.forEach((i) => {
 
   const cname = uppercamelcase(id);
 
-  const out = `
-  import React, { memo } from 'react'
-  import PropTypes from 'prop-types'
-  import type { NamedExoticComponent } from 'react'
-  import type { IconProps } from '@tamagui/helpers-icon'
-  import {
-    Svg,
-    Circle as _Circle,
-    Ellipse as SvgEllipse,
-    G,
-    LinearGradient,
-    RadialGradient, 
-    Line,
-    Path as SvgPath,
-    Polygon as SvgPolygon,
-    Polyline as SvgPolyline,
-    Rect as SvgRect,
-    Symbol as SvgSymbol,
-    Text as _Text,
-    Use,
-    Defs,
-    Stop as SvgStop
-  } from 'react-native-svg'
-  import { themed } from '@tamagui/helpers-icon'
-
-  const Icon = (props) => {
-    const { color = 'black', size = 24, ...otherProps } = props
-    return (
-      ${$('svg')
-        .toString()
-        .replace(/ class=\"[^\"]+\"/g, '')
-        .replace(/ version=\"[^\"]+\"/g, '')
-        .replace(new RegExp('stroke="currentColor"', 'g'), 'stroke={color}')
-        .replace('width="24"', 'width={size}')
-        .replace('height="24"', 'height={size}')
-        .replace('otherProps="..."', '{...otherProps}')
-        .replace('width="size"', 'width={size}')
-        .replace('height="size"', 'height={size}')
-        .replace('<svg', '<Svg')
-        .replace('</svg', '</Svg')
-        .replace(new RegExp('<circle', 'g'), '<_Circle')
-        .replace(new RegExp('</circle', 'g'), '</_Circle')
-        .replace(new RegExp('<ellipse', 'g'), '<SvgEllipse')
-        .replace(new RegExp('</ellipse', 'g'), '</SvgEllipse')
-        .replace(new RegExp('<g', 'g'), '<G')
-        .replace(new RegExp('</g', 'g'), '</G')
-        .replace(new RegExp('<linear-gradient', 'g'), '<LinearGradient')
-        .replace(new RegExp('</linear-gradient', 'g'), '</LinearGradient')
-        .replace(new RegExp('<radial-gradient', 'g'), '<RadialGradient')
-        .replace(new RegExp('</radial-gradient', 'g'), '</RadialGradient')
-        .replace(new RegExp('<path', 'g'), '<SvgPath')
-        .replace(new RegExp('</path', 'g'), '</SvgPath')
-        .replace(new RegExp('<line', 'g'), '<Line')
-        .replace(new RegExp('</line', 'g'), '</Line')
-        .replace(new RegExp('<polygon', 'g'), '<SvgPolygon')
-        .replace(new RegExp('</polygon', 'g'), '</SvgPolygon')
-        .replace(new RegExp('<polyline', 'g'), '<SvgPolyline')
-        .replace(new RegExp('</polyline', 'g'), '</SvgPolyline')
-        .replace(new RegExp('<rect', 'g'), '<SvgRect')
-        .replace(new RegExp('</rect', 'g'), '</SvgRect')
-        .replace(new RegExp('<symbol', 'g'), '<SvgSymbol')
-        .replace(new RegExp('</symbol', 'g'), '</SvgSymbol')
-        .replace(new RegExp('<text', 'g'), '<_Text')
-        .replace(new RegExp('</text', 'g'), '</_Text')
-        .replace(new RegExp('<use', 'g'), '<Use')
-        .replace(new RegExp('</use', 'g'), '</Use')
-        .replace(new RegExp('<defs', 'g'), '<Defs')
-        .replace(new RegExp('</defs', 'g'), '</Defs')
-        .replace(new RegExp('<stop', 'g'), '<SvgStop')
-        .replace(new RegExp('</stop', 'g'), '</SvgStop')
-        .replace(new RegExp('px', 'g'), '')}
-    )
-  }
-
-  Icon.displayName = '${cname}'
-
-  export const ${cname}: (propsIn: IconProps) => JSX.Element = memo<IconProps>(themed(Icon))
-`;
+  const out = wrapReact(
+    cname,
+    $('svg')
+      .toString()
+      .replace(/ class=\"[^\"]+\"/g, '')
+      .replace(/ version=\"[^\"]+\"/g, '')
+      .replace(new RegExp('stroke="currentColor"', 'g'), 'stroke={color}')
+      .replace('width="24"', 'width={size}')
+      .replace('height="24"', 'height={size}')
+      .replace('otherProps="..."', '{...otherProps}')
+      .replace('width="size"', 'width={size}')
+      .replace('height="size"', 'height={size}')
+      .replace('<svg', '<Svg')
+      .replace('</svg', '</Svg')
+      .replace(new RegExp('<circle', 'g'), '<_Circle')
+      .replace(new RegExp('</circle', 'g'), '</_Circle')
+      .replace(new RegExp('<ellipse', 'g'), '<SvgEllipse')
+      .replace(new RegExp('</ellipse', 'g'), '</SvgEllipse')
+      .replace(new RegExp('<g', 'g'), '<G')
+      .replace(new RegExp('</g', 'g'), '</G')
+      .replace(new RegExp('<linear-gradient', 'g'), '<LinearGradient')
+      .replace(new RegExp('</linear-gradient', 'g'), '</LinearGradient')
+      .replace(new RegExp('<radial-gradient', 'g'), '<RadialGradient')
+      .replace(new RegExp('</radial-gradient', 'g'), '</RadialGradient')
+      .replace(new RegExp('<path', 'g'), '<SvgPath')
+      .replace(new RegExp('</path', 'g'), '</SvgPath')
+      .replace(new RegExp('<line', 'g'), '<Line')
+      .replace(new RegExp('</line', 'g'), '</Line')
+      .replace(new RegExp('<polygon', 'g'), '<SvgPolygon')
+      .replace(new RegExp('</polygon', 'g'), '</SvgPolygon')
+      .replace(new RegExp('<polyline', 'g'), '<SvgPolyline')
+      .replace(new RegExp('</polyline', 'g'), '</SvgPolyline')
+      .replace(new RegExp('<rect', 'g'), '<SvgRect')
+      .replace(new RegExp('</rect', 'g'), '</SvgRect')
+      .replace(new RegExp('<symbol', 'g'), '<SvgSymbol')
+      .replace(new RegExp('</symbol', 'g'), '</SvgSymbol')
+      .replace(new RegExp('<text', 'g'), '<_Text')
+      .replace(new RegExp('</text', 'g'), '</_Text')
+      .replace(new RegExp('<use', 'g'), '<Use')
+      .replace(new RegExp('</use', 'g'), '</Use')
+      .replace(new RegExp('<defs', 'g'), '<Defs')
+      .replace(new RegExp('</defs', 'g'), '</Defs')
+      .replace(new RegExp('<stop', 'g'), '<SvgStop')
+      .replace(new RegExp('</stop', 'g'), '</SvgStop')
+      .replace(new RegExp('px', 'g'), '')
+  );
 
   fs.writeFileSync(location, out, 'utf-8');
 
@@ -167,3 +135,40 @@ setTimeout(() => {
   // run biome:
   require('child_process').execSync(`biome check --write src`);
 }, 1000);
+
+function wrapReact(name, contents) {
+  return `// @ts-nocheck
+import React, { memo } from 'react'
+    import PropTypes from 'prop-types'
+    import type { NamedExoticComponent } from 'react'
+    import type { IconProps } from '@tamagui/helpers-icon'
+    import {
+      Svg,
+      Circle as _Circle,
+      Ellipse as SvgEllipse,
+      G,
+      LinearGradient,
+      RadialGradient, 
+      Line,
+      Path as SvgPath,
+      Polygon as SvgPolygon,
+      Polyline as SvgPolyline,
+      Rect as SvgRect,
+      Symbol as SvgSymbol,
+      Text as _Text,
+      Use,
+      Defs,
+      Stop as SvgStop
+    } from 'react-native-svg'
+    import { themed } from '@tamagui/helpers-icon'
+
+    type IconComponent = (propsIn: IconProps) => JSX.Element
+    
+    export const ${name}: IconComponent = themed(memo(function ${name}(props: IconProps) {
+      const { color = 'black', size = 24, ...otherProps } = props
+      return (
+       ${contents}
+      )
+    }))
+      `;
+}

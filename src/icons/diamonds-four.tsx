@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import type { NamedExoticComponent } from 'react'
@@ -22,71 +23,69 @@ import {
 } from 'react-native-svg'
 import { themed } from '@tamagui/helpers-icon'
 
-const Icon = (props) => {
-  const { color = 'black', size = 24, ...otherProps } = props
-  return (
-    <Svg
-      viewBox="0 0 256 256"
-      width={size}
-      height={size}
-      fill="currentColor"
-      {...otherProps}
-    >
-      <SvgRect width="256" height="256" fill="none" />
-      <SvgRect
-        x="99.72"
-        y="35.72"
-        width="56.57"
-        height="56.57"
-        transform="translate(-7.76 109.25) rotate(-45)"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="16"
-      />
-      <SvgRect
-        x="99.72"
-        y="163.72"
-        width="56.57"
-        height="56.57"
-        transform="translate(-98.27 146.75) rotate(-45)"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="16"
-      />
-      <SvgRect
-        x="163.72"
-        y="99.72"
-        width="56.57"
-        height="56.57"
-        transform="translate(-34.27 173.25) rotate(-45)"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="16"
-      />
-      <SvgRect
-        x="35.72"
-        y="99.72"
-        width="56.57"
-        height="56.57"
-        transform="translate(-71.76 82.75) rotate(-45)"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="16"
-      />
-    </Svg>
-  )
-}
+type IconComponent = (propsIn: IconProps) => JSX.Element
 
-Icon.displayName = 'DiamondsFour'
-
-export const DiamondsFour: (propsIn: IconProps) => JSX.Element = memo<IconProps>(
-  themed(Icon)
+export const DiamondsFour: IconComponent = themed(
+  memo(function DiamondsFour(props: IconProps) {
+    const { color = 'black', size = 24, ...otherProps } = props
+    return (
+      <Svg
+        viewBox="0 0 256 256"
+        width={size}
+        height={size}
+        fill="currentColor"
+        {...otherProps}
+      >
+        <SvgRect width="256" height="256" fill="none" />
+        <SvgRect
+          x="99.72"
+          y="35.72"
+          width="56.57"
+          height="56.57"
+          transform="translate(-7.76 109.25) rotate(-45)"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="16"
+        />
+        <SvgRect
+          x="99.72"
+          y="163.72"
+          width="56.57"
+          height="56.57"
+          transform="translate(-98.27 146.75) rotate(-45)"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="16"
+        />
+        <SvgRect
+          x="163.72"
+          y="99.72"
+          width="56.57"
+          height="56.57"
+          transform="translate(-34.27 173.25) rotate(-45)"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="16"
+        />
+        <SvgRect
+          x="35.72"
+          y="99.72"
+          width="56.57"
+          height="56.57"
+          transform="translate(-71.76 82.75) rotate(-45)"
+          fill="none"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="16"
+        />
+      </Svg>
+    )
+  })
 )
