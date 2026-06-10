@@ -1,19 +1,36 @@
-const fs = require('node:fs');
-const glob = require('glob');
+import fs from 'node:fs';
+import path from 'node:path';
+import { execSync } from 'node:child_process';
+import { globSync } from 'glob';
 import camelcase from 'camelcase';
-const uppercamelcase = require('uppercamelcase');
-const path = require('node:path');
-const cheerio = require('cheerio');
+import uppercamelcase from 'uppercamelcase';
+import * as cheerio from 'cheerio';
+import { fileURLToPath } from 'node:url';
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.join(__dirname, '..');
 const phosphorSvgsDir = path.join(rootDir, 'svgs');
 
 const outDir = path.join(rootDir, 'src/icons');
-const icons = glob.sync(`${phosphorSvgsDir}/*/**.svg`);
+const icons = globSync(`${phosphorSvgsDir}/*/**.svg`).sort();
 
-fs.mkdir(outDir, () => {});
+fs.rmSync(outDir, { recursive: true, force: true });
+fs.mkdirSync(outDir, { recursive: true });
 
-let iconExports = [];
+const iconExports = [];
+const packageJsonExports = {};
+
+function createAlignedExport(basePath) {
+  return {
+    types: basePath.replace('/dist/esm/', '/types/').replace('.mjs', '.d.ts'),
+    'react-native': basePath.replace('.mjs', '.native.js'),
+    browser: basePath,
+    module: basePath,
+    import: basePath,
+    require: basePath.replace('/esm/', '/cjs/').replace('.mjs', '.cjs'),
+    default: basePath,
+  };
+}
 
 icons.forEach((i) => {
   const svg = fs.readFileSync(i, 'utf-8');
@@ -21,7 +38,9 @@ icons.forEach((i) => {
   const $ = cheerio.load(svg, {
     xmlMode: true,
   });
-  const fileName = path.basename(i).replace('.svg', '.tsx');
+
+  const cname = uppercamelcase(id);
+  const fileName = `${cname}.tsx`;
   const location = path.join(outDir, fileName);
 
   // Because CSS does not exist on Native platforms
@@ -70,8 +89,6 @@ icons.forEach((i) => {
       $(el).attr('otherProps', '...');
     }
   });
-
-  const cname = uppercamelcase(id);
 
   const out = wrapReact(
     cname,
@@ -122,19 +139,34 @@ icons.forEach((i) => {
 
   fs.writeFileSync(location, out, 'utf-8');
 
-  iconExports.push(`export { ${cname} } from './icons/${id}'`);
+  iconExports.push(`export { ${cname} } from './icons/${cname}'`);
+  packageJsonExports[`./icons/${cname}`] = createAlignedExport(
+    `./dist/esm/icons/${cname}.mjs`
+  );
 });
 
-setTimeout(() => {
-  fs.writeFileSync(
-    path.join(rootDir, 'src', 'index.ts'),
-    iconExports.join('\n'),
-    'utf-8'
-  );
+fs.writeFileSync(
+  path.join(rootDir, 'src', 'index.ts'),
+  iconExports.join('\n'),
+  'utf-8'
+);
 
-  // run biome:
-  require('child_process').execSync(`biome check --write src`);
-}, 1000);
+// Write per-icon exports into package.json so bundlers without
+// tree-shaking (e.g. Metro) can import single icons
+const pkgJsonPath = path.join(rootDir, 'package.json');
+const pkgJson = JSON.parse(fs.readFileSync(pkgJsonPath, 'utf-8'));
+pkgJson.exports = {
+  ...Object.fromEntries(
+    Object.entries(pkgJson.exports).filter(
+      ([key]) => !key.startsWith('./icons')
+    )
+  ),
+  ...packageJsonExports,
+};
+fs.writeFileSync(pkgJsonPath, `${JSON.stringify(pkgJson, null, 2)}\n`, 'utf-8');
+
+// run biome:
+execSync('biome check --write src', { cwd: rootDir, stdio: 'inherit' });
 
 function wrapReact(name, contents) {
   return `// @ts-nocheck
@@ -148,7 +180,7 @@ import React, { memo } from 'react'
       Ellipse as SvgEllipse,
       G,
       LinearGradient,
-      RadialGradient, 
+      RadialGradient,
       Line,
       Path as SvgPath,
       Polygon as SvgPolygon,
@@ -163,7 +195,7 @@ import React, { memo } from 'react'
     import { themed } from '@tamagui/helpers-icon'
 
     type IconComponent = (propsIn: IconProps) => JSX.Element
-    
+
     export const ${name}: IconComponent = themed(memo(function ${name}(props: IconProps) {
       const { color = 'black', size = 24, ...otherProps } = props
       return (

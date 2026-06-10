@@ -1,4 +1,4 @@
-import type { NamedExoticComponent } from 'react';
 import type { IconProps } from '@tamagui/helpers-icon';
-export declare const Funnel: NamedExoticComponent<IconProps>;
-//# sourceMappingURL=funnel.d.ts.map
+type IconComponent = (propsIn: IconProps) => JSX.Element;
+export declare const Funnel: IconComponent;
+export {};

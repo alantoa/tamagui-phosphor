@@ -1,4 +1,4 @@
-import type { NamedExoticComponent } from 'react';
 import type { IconProps } from '@tamagui/helpers-icon';
-export declare const Snowflake: NamedExoticComponent<IconProps>;
-//# sourceMappingURL=snowflake.d.ts.map
+type IconComponent = (propsIn: IconProps) => JSX.Element;
+export declare const Snowflake: IconComponent;
+export {};

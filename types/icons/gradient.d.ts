@@ -1,4 +1,4 @@
-import type { NamedExoticComponent } from 'react';
 import type { IconProps } from '@tamagui/helpers-icon';
-export declare const Gradient: NamedExoticComponent<IconProps>;
-//# sourceMappingURL=gradient.d.ts.map
+type IconComponent = (propsIn: IconProps) => JSX.Element;
+export declare const Gradient: IconComponent;
+export {};

@@ -1,4 +1,4 @@
-import type { NamedExoticComponent } from 'react';
 import type { IconProps } from '@tamagui/helpers-icon';
-export declare const Jar: NamedExoticComponent<IconProps>;
-//# sourceMappingURL=jar.d.ts.map
+type IconComponent = (propsIn: IconProps) => JSX.Element;
+export declare const Jar: IconComponent;
+export {};

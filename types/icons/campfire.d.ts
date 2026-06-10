@@ -1,4 +1,4 @@
-import type { NamedExoticComponent } from 'react';
 import type { IconProps } from '@tamagui/helpers-icon';
-export declare const Campfire: NamedExoticComponent<IconProps>;
-//# sourceMappingURL=campfire.d.ts.map
+type IconComponent = (propsIn: IconProps) => JSX.Element;
+export declare const Campfire: IconComponent;
+export {};

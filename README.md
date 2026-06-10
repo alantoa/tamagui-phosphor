@@ -2,36 +2,47 @@
 
 A Tamagui-themed icon library for [Phosphor Icons](https://phosphoricons.com).
 
+> Requires **Tamagui v2** and **React 19**. For Tamagui v1, use `tamagui-phosphor@0.1.x`.
+
 ## Installation
 
 ```bash
-npm install tamagui-phosphor phosphor-react-native
+npm install tamagui-phosphor react-native-svg
 # or
-yarn add tamagui-phosphor phosphor-react-native
+yarn add tamagui-phosphor react-native-svg
 # or
-pnpm add tamagui-phosphor phosphor-react-native
+pnpm add tamagui-phosphor react-native-svg
 # or
-bun add tamagui-phosphor phosphor-react-native
+bun add tamagui-phosphor react-native-svg
 ```
 
 ## Usage
 
 ```tsx
-import * as Phosphor from './index';
+import { House } from 'tamagui-phosphor';
 import { Button } from 'tamagui';
 
 export default function App() {
-  return <Button icon={Phosphor.House}>House</Button>;
+  return <Button icon={House}>House</Button>;
 }
 ```
+
+You can also import a single icon directly — useful with bundlers that don't
+tree-shake (e.g. Metro), so only that icon is bundled:
+
+```tsx
+import { House } from 'tamagui-phosphor/icons/House';
+```
+
+Icon variants are suffixed: `House` (regular), `HouseBold`, `HouseFill`.
 
 ## Features
 
 - Full Tamagui theme system support
-- Includes all Phosphor Icons
-- React Native support
+- Includes all Phosphor Icons (regular, bold, fill)
+- React Native and web support (esm / cjs / native builds)
+- Per-icon entry points for tree-shaking-free bundlers
 - Type-safe
-- Automatically renames reserved icon names to avoid conflicts
 
 ## Props
 
@@ -39,17 +50,16 @@ Icon components accept the following props:
 
 - `size`: Size of the icon (number)
 - `color`: Color of the icon (string)
-- `weight`: Weight of the icon ('thin' | 'light' | 'regular' | 'bold' | 'fill')
 - All other Tamagui icon props
 
 ## Development
 
 ```bash
-# Generate icons
+# Generate icons (also updates the per-icon exports map in package.json)
 bun generate
 
-# Run tests
-bun test
+# Build esm/cjs/native bundles and types
+bun run build
 
 # Release new version
 bun release

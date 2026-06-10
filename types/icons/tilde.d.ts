@@ -1,4 +1,4 @@
-import type { NamedExoticComponent } from 'react';
 import type { IconProps } from '@tamagui/helpers-icon';
-export declare const Tilde: NamedExoticComponent<IconProps>;
-//# sourceMappingURL=tilde.d.ts.map
+type IconComponent = (propsIn: IconProps) => JSX.Element;
+export declare const Tilde: IconComponent;
+export {};

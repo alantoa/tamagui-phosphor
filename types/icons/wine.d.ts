@@ -1,4 +1,4 @@
-import type { NamedExoticComponent } from 'react';
 import type { IconProps } from '@tamagui/helpers-icon';
-export declare const Wine: NamedExoticComponent<IconProps>;
-//# sourceMappingURL=wine.d.ts.map
+type IconComponent = (propsIn: IconProps) => JSX.Element;
+export declare const Wine: IconComponent;
+export {};
