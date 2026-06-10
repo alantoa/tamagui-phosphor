@@ -1,4 +1,4 @@
-import type { NamedExoticComponent } from 'react';
 import type { IconProps } from '@tamagui/helpers-icon';
-export declare const Keyboard: NamedExoticComponent<IconProps>;
-//# sourceMappingURL=keyboard.d.ts.map
+type IconComponent = (propsIn: IconProps) => JSX.Element;
+export declare const Keyboard: IconComponent;
+export {};

@@ -1,4 +1,4 @@
-import type { NamedExoticComponent } from 'react';
 import type { IconProps } from '@tamagui/helpers-icon';
-export declare const Shuffle: NamedExoticComponent<IconProps>;
-//# sourceMappingURL=shuffle.d.ts.map
+type IconComponent = (propsIn: IconProps) => JSX.Element;
+export declare const Shuffle: IconComponent;
+export {};

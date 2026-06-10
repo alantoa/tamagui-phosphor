@@ -1,4 +1,4 @@
-import type { NamedExoticComponent } from 'react';
 import type { IconProps } from '@tamagui/helpers-icon';
-export declare const Polygon: NamedExoticComponent<IconProps>;
-//# sourceMappingURL=polygon.d.ts.map
+type IconComponent = (propsIn: IconProps) => JSX.Element;
+export declare const Polygon: IconComponent;
+export {};

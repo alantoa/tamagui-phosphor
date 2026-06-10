@@ -1,4 +1,4 @@
-import type { NamedExoticComponent } from 'react';
 import type { IconProps } from '@tamagui/helpers-icon';
-export declare const Gif: NamedExoticComponent<IconProps>;
-//# sourceMappingURL=gif.d.ts.map
+type IconComponent = (propsIn: IconProps) => JSX.Element;
+export declare const Gif: IconComponent;
+export {};

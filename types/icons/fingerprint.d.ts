@@ -1,4 +1,4 @@
-import type { NamedExoticComponent } from 'react';
 import type { IconProps } from '@tamagui/helpers-icon';
-export declare const Fingerprint: NamedExoticComponent<IconProps>;
-//# sourceMappingURL=fingerprint.d.ts.map
+type IconComponent = (propsIn: IconProps) => JSX.Element;
+export declare const Fingerprint: IconComponent;
+export {};

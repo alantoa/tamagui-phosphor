@@ -1,4 +1,4 @@
-import type { NamedExoticComponent } from 'react';
 import type { IconProps } from '@tamagui/helpers-icon';
-export declare const Towel: NamedExoticComponent<IconProps>;
-//# sourceMappingURL=towel.d.ts.map
+type IconComponent = (propsIn: IconProps) => JSX.Element;
+export declare const Towel: IconComponent;
+export {};

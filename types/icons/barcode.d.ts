@@ -1,4 +1,4 @@
-import type { NamedExoticComponent } from 'react';
 import type { IconProps } from '@tamagui/helpers-icon';
-export declare const Barcode: NamedExoticComponent<IconProps>;
-//# sourceMappingURL=barcode.d.ts.map
+type IconComponent = (propsIn: IconProps) => JSX.Element;
+export declare const Barcode: IconComponent;
+export {};

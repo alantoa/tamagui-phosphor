@@ -1,4 +1,4 @@
-import type { NamedExoticComponent } from 'react';
 import type { IconProps } from '@tamagui/helpers-icon';
-export declare const Bathtub: NamedExoticComponent<IconProps>;
-//# sourceMappingURL=bathtub.d.ts.map
+type IconComponent = (propsIn: IconProps) => JSX.Element;
+export declare const Bathtub: IconComponent;
+export {};

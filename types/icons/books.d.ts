@@ -1,4 +1,4 @@
-import type { NamedExoticComponent } from 'react';
 import type { IconProps } from '@tamagui/helpers-icon';
-export declare const Books: NamedExoticComponent<IconProps>;
-//# sourceMappingURL=books.d.ts.map
+type IconComponent = (propsIn: IconProps) => JSX.Element;
+export declare const Books: IconComponent;
+export {};
